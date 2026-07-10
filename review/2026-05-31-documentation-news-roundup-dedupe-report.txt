@@ -1,0 +1,18 @@
+Dedupe report for 2026-05-31-documentation-news-roundup
+Generated: 2026-06-04T03:13:14.647Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- docs analytics
+- AI adoption metrics
+- MCP and skill.md
+- information architecture
+- clarity in technical writing
+
+This week avoids the earlier themes of review branches, release-note automation, and AI-readiness audits by focusing on measurement, agent instruction layers, and documentation UX clarity.
+

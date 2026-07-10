@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A practical technical documentation site for product teams, developers, and support teams shipping modern technology products."
+    >
+    <title>TechDocs Studio | Technical Documentation for Product Teams</title>
+    <link rel="preconnect" href="https://upload.wikimedia.org">
+    <link rel="stylesheet" href="styles.css?v=20260509">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a href="#coverage">Coverage</a>
+          <a href="#system">System</a>
+          <a href="#articles">Articles</a>
+          <a href="#audit">Audit</a>
+          <a class="nav-cta" href="#contact">Start a doc audit</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img
+          class="hero-media"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Laptop_on_a_desk_%28Unsplash%29.jpg/1280px-Laptop_on_a_desk_%28Unsplash%29.jpg"
+          alt="Laptop on a desk with notebooks and product planning materials"
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Documentation for technical products</p>
+          <h1 id="hero-title">Technical documentation that makes products easier to adopt.</h1>
+          <p class="hero-copy">
+            Clear guides, API references, onboarding paths, and release notes for teams that need customers,
+            developers, and support teams to find the right answer fast.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#coverage">Explore the site</a>
+            <a class="button button-secondary" href="#audit">Run the checklist</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-band" id="coverage" aria-labelledby="coverage-title">
+        <div class="section-heading">
+          <p class="eyebrow">What the site covers</p>
+          <h2 id="coverage-title">Documentation for every product touchpoint</h2>
+          <p>
+            Use this site as a home for practical writing about product docs, developer experience, and the
+            systems that keep technical content accurate after launch.
+          </p>
+        </div>
+
+        <div class="coverage-grid">
+          <article class="feature-card">
+            <span class="feature-kicker">01</span>
+            <h3>Developer docs</h3>
+            <p>
+              API references, SDK quickstarts, authentication guides, code examples, webhooks, and
+              troubleshooting paths that help builders ship with confidence.
+            </p>
+          </article>
+          <article class="feature-card accent-green">
+            <span class="feature-kicker">02</span>
+            <h3>Product guides</h3>
+            <p>
+              Setup walkthroughs, admin documentation, feature explainers, migration guides, and in-product
+              help that reduce support load.
+            </p>
+          </article>
+          <article class="feature-card accent-yellow">
+            <span class="feature-kicker">03</span>
+            <h3>Launch content</h3>
+            <p>
+              Release notes, changelogs, beta docs, enablement packets, and launch readiness checklists for
+              teams shipping frequent updates.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section system-section" id="system" aria-labelledby="system-title">
+        <div class="system-copy">
+          <p class="eyebrow">Documentation system</p>
+          <h2 id="system-title">A publishing model built for technical accuracy</h2>
+          <p>
+            Strong documentation is more than polished writing. It needs ownership, review loops, product
+            signals, and reusable patterns that scale across every product area.
+          </p>
+          <ol class="process-list">
+            <li>
+              <strong>Map the journey.</strong>
+              Identify the moments where a reader is blocked, learning, integrating, or making a decision.
+            </li>
+            <li>
+              <strong>Design the source of truth.</strong>
+              Separate conceptual guidance, task flows, references, and release artifacts.
+            </li>
+            <li>
+              <strong>Maintain the loop.</strong>
+              Use product changes, search logs, support tickets, and analytics to keep docs fresh.
+            </li>
+          </ol>
+        </div>
+
+        <div class="workspace-preview" aria-label="Documentation workspace preview">
+          <div class="preview-toolbar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="preview-body">
+            <aside class="preview-nav" aria-label="Sample documentation navigation">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </aside>
+            <div class="preview-panel">
+              <div class="preview-title"></div>
+              <div class="preview-line wide"></div>
+              <div class="preview-line"></div>
+              <div class="preview-callout"></div>
+              <div class="preview-code">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section articles-section" id="articles" aria-labelledby="articles-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Featured articles</p>
+          <h2 id="articles-title">Weekly reporting and practical documentation guides</h2>
+        </div>
+
+        <div class="article-filters" aria-label="Filter articles">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="developer">Developer</button>
+          <button class="filter-button" type="button" data-filter="product">Product</button>
+          <button class="filter-button" type="button" data-filter="operations">Operations</button>
+        </div>
+
+        <div class="article-grid" data-articles>
+          <article class="article-card" data-category="operations">
+            <p class="article-meta">Weekly roundup</p>
+            <h3>Documentation news roundup: agent-ready docs, collaborative editors, and release-note automation</h3>
+            <p>Three recent signals shaping technical writing work in May 2026, with source links and editorial framing.</p>
+            <a href="articles/2026-05-09-documentation-news-roundup.html">Read the weekly roundup</a>
+          </article>
+          <article class="article-card" data-category="developer">
+            <p class="article-meta">Developer docs</p>
+            <h3>How to structure an API quickstart that developers actually finish</h3>
+            <p>Turn authentication, first calls, error handling, and next steps into one focused first win.</p>
+            <a href="#contact">Request this guide</a>
+          </article>
+          <article class="article-card" data-category="product">
+            <p class="article-meta">Product docs</p>
+            <h3>Designing admin guides for complex SaaS configuration</h3>
+            <p>Help operators understand permissions, defaults, dependencies, and rollout decisions.</p>
+            <a href="#contact">Request this guide</a>
+          </article>
+          <article class="article-card" data-category="operations">
+            <p class="article-meta">Content operations</p>
+            <h3>Building a docs review cycle that survives weekly releases</h3>
+            <p>Assign ownership, define update triggers, and connect product changes to documentation work.</p>
+            <a href="#contact">Request this guide</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section audit-section" id="audit" aria-labelledby="audit-title">
+        <div class="audit-copy">
+          <p class="eyebrow">Documentation audit</p>
+          <h2 id="audit-title">Check the health of a technical docs set</h2>
+          <p>
+            Mark the basics that are already true. The score gives you a fast read on whether the next
+            improvement should be structure, accuracy, discoverability, or maintenance.
+          </p>
+        </div>
+
+        <div class="audit-tool" data-audit>
+          <div class="audit-score">
+            <span class="score-label">Readiness</span>
+            <strong data-score>0%</strong>
+            <div class="score-track" aria-hidden="true">
+              <span data-progress></span>
+            </div>
+          </div>
+
+          <fieldset class="checklist">
+            <legend class="sr-only">Technical documentation readiness checklist</legend>
+            <label>
+              <input type="checkbox" data-check>
+              <span>Every key product area has an owner and review cadence.</span>
+            </label>
+            <label>
+              <input type="checkbox" data-check>
+              <span>Top search terms map to clear documentation pages.</span>
+            </label>
+            <label>
+              <input type="checkbox" data-check>
+              <span>API examples are tested against current behavior.</span>
+            </label>
+            <label>
+              <input type="checkbox" data-check>
+              <span>Release notes link to the affected guides and references.</span>
+            </label>
+            <label>
+              <input type="checkbox" data-check>
+              <span>Support tickets feed a recurring docs improvement backlog.</span>
+            </label>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="section product-section" aria-labelledby="products-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Tech products</p>
+          <h2 id="products-title">Content patterns for different product types</h2>
+        </div>
+
+        <div class="product-grid">
+          <article>
+            <h3>SaaS platforms</h3>
+            <p>Role-based onboarding, configuration docs, admin workflows, integrations, and plan changes.</p>
+          </article>
+          <article>
+            <h3>Developer tools</h3>
+            <p>Install paths, command references, extensibility guides, plugin docs, and migration notes.</p>
+          </article>
+          <article>
+            <h3>AI products</h3>
+            <p>Model behavior notes, prompt patterns, evaluation guidance, safety boundaries, and examples.</p>
+          </article>
+          <article>
+            <h3>Hardware and IoT</h3>
+            <p>Setup guides, firmware updates, diagnostics, compatibility tables, and field support docs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Work with the site</p>
+          <h2 id="contact-title">Turn product knowledge into documentation people can use.</h2>
+        </div>
+        <a class="button button-primary" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>TechDocs Studio. Built for GitHub Pages.</p>
+      <p>
+        Hero image:
+        <a href="https://commons.wikimedia.org/wiki/File:Laptop_on_a_desk_(Unsplash).jpg">Wikimedia Commons</a>.
+      </p>
+    </footer>
+
+    <script src="script.js?v=20260509"></script>
+  </body>
+</html>

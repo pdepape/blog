@@ -1,0 +1,18 @@
+Dedupe report for 2026-07-05-documentation-news-roundup
+Generated: 2026-07-10T02:42:15.719Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- API documentation friction
+- OpenAPI workflows
+- docs search and navigation
+- technical writer judgment
+- documentation voice
+
+This week avoids the earlier themes of docs metrics, agent contracts, and information architecture by focusing on API-doc friction, workflow compression, discoverability, and the editorial role of technical writers.
+

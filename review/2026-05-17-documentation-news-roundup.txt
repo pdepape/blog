@@ -1,0 +1,101 @@
+TECHDOCS STUDIO REVIEW DRAFT
+May 17, 2026
+
+Documentation news roundup: docs stacks, agent-facing structure, and callable publishing workflows
+
+This week's documentation signal is more specific than the broad "AI is changing writing" story that
+has dominated the past few months. The more interesting shift is that documentation is being treated
+as executable infrastructure: a repo with automation, machine-readable outputs, and callable workflows
+that can be inspected, tested, and operated like the rest of the product surface.
+
+That matters for technical writers because the center of gravity is moving away from one-off prompt
+experiments and toward durable systems. Teams are not only asking whether an article reads well. They
+are asking whether the docs stack can be parsed by agents, updated from code changes, and governed with
+the same rigor as any other engineering asset.
+
+1. Docs teams are starting to open-source the maintenance layer, not just the content
+
+On May 4, 2026, Warp published a detailed write-up about moving its documentation to a stack it
+controls end-to-end and open-sourcing both the docs repo and the agents that maintain it. The post is
+notable because it documents the operating model, not just the final site.
+
+Warp describes a docs repo with scheduled agents for broken-link sweeps, changelog updates, codebase
+syncing, SEO and answer-engine audits, and draft scaffolding. During the migration, the team says it
+ran roughly 285 cloud-agent tasks and reviewed 64 pull requests against the repository.
+
+The takeaway for technical writing teams is that docs-as-code is evolving into docs-as-operations.
+The differentiator is no longer simply "our content lives in Git." It is whether recurring maintenance
+work is explicit, versioned, and reviewable. When the maintenance logic lives beside the content,
+writers can improve the system instead of re-performing the same chores every week.
+
+2. Machine-readable exports are becoming a first-class docs feature
+
+APIMatic's May 14, 2026 changelog offers a second useful signal. In one release, the company added
+custom URL slugs for developer portals and also revamped its `llms.txt` and `llms-full.txt` support
+while adding per-page Markdown exports.
+
+Those details matter because they turn information architecture into an interface contract for both
+humans and machines. Custom slugs improve URL stability and editorial control. Per-page Markdown
+exports give AI systems access to the same page-level source readers see, instead of forcing them to
+infer structure from rendered HTML alone.
+
+This is different from last week's "agent-ready docs" discussion. The conversation is moving from
+high-level scoring and advice into concrete output formats and portal behaviors. For documentation
+teams, that means machine-readable delivery is becoming part of the publishing checklist, not an
+experimental add-on.
+
+3. Research is now documenting the failure modes of API docs for agents
+
+One of the strongest new pieces of evidence this week came from a May 14, 2026 arXiv paper titled
+"Making OpenAPI Documentation Agent-Ready: Detecting Documentation and REST Smells with a Multi-Agent
+LLM System." The authors describe an industrial evaluation across 16 production APIs and about 600
+endpoints.
+
+Their system, Hermes, detected 2,450 documentation and REST smells across those endpoints. The paper's
+most practical conclusion is that structurally valid APIs can still fail badly when agents try to plan
+tasks, choose tools, or construct payloads from the documentation.
+
+That is important for technical writers because it reframes documentation quality. The question is no
+longer only whether a person can eventually figure something out. It is whether the artifact is
+specific enough for a machine to act on without inventing missing semantics. Expect more docs teams to
+adopt linting, smell detection, and endpoint-level quality gates as part of API governance.
+
+4. Documentation workflows are becoming callable through APIs
+
+GitHub's May 13 and May 5 changelog entries point in the same direction. On May 13, GitHub announced
+that Copilot cloud agent tasks can now be started through the REST API, with examples including
+automatically preparing a new weekly release and drafting release notes. On May 5, GitHub also made
+secret scanning in the GitHub MCP server generally available, making security checks callable inside
+agent workflows before code is committed.
+
+The combined signal is that documentation work is no longer isolated from the automation surface. A
+release-note workflow, security review, or maintenance pass can now be triggered, tracked, and
+integrated through APIs and agent protocols instead of relying on a writer to remember every step.
+
+For technical writers, this creates a new design problem: workflows need clear triggers, structured
+inputs, and review checkpoints. In other words, good documentation operations increasingly resemble
+well-designed software interfaces.
+
+Why this week matters
+
+Taken together, these sources suggest a maturing documentation stack. The strategic shift is not just
+that AI can help write drafts. It is that documentation itself is becoming an operational product:
+versioned, measurable, machine-readable, and callable from other systems.
+
+That is a healthier direction for technical writing than generic content generation hype. It favors the
+things good docs teams already know how to do: define structure, reduce ambiguity, stabilize naming,
+create reviewable workflows, and keep source-of-truth artifacts aligned with reality. The difference is
+that those same practices now determine whether agents can use the content safely as well.
+
+If you own docs this week, a practical next step is to audit one recurring workflow end to end. Pick a
+high-frequency task such as release notes, changelog updates, broken-link review, or API reference
+maintenance. Then ask three concrete questions: which inputs trigger it, which outputs must be stable
+for both humans and agents, and which parts can be automated without removing editorial control?
+
+Sources
+
+- Warp: "Open-sourcing our docs and the agents that maintain them" (May 4, 2026) https://www.warp.dev/blog/open-sourcing-our-docs-and-the-agents-that-maintain-them
+- APIMatic Changelog: "Added Support for Custom URL Slugs in Developer Portals" and "Revamping LLM Context Files and Adding Per-Page Markdown Exports" (May 14, 2026) https://docs.apimatic.io/changelog/
+- arXiv: "Making OpenAPI Documentation Agent-Ready: Detecting Documentation and REST Smells with a Multi-Agent LLM System" (May 14, 2026) https://arxiv.org/abs/2605.14312
+- GitHub Changelog: "Start Copilot cloud agent tasks via the REST API" (May 13, 2026) https://github.blog/changelog/2026-05-13-start-copilot-cloud-agent-tasks-via-the-rest-api/
+- GitHub Changelog: "Secret scanning with GitHub MCP Server is now generally available" (May 5, 2026) https://github.blog/changelog/2026-05-05-secret-scanning-with-github-mcp-server-is-now-generally-available/

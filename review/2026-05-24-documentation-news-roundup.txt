@@ -1,0 +1,92 @@
+TECHDOCS STUDIO REVIEW DRAFT
+May 24, 2026
+
+Documentation news roundup: review branches, audit controls, and AI readiness checkpoints
+
+This week's documentation story is not that AI can generate drafts. That is already table stakes.
+The more useful shift is that documentation teams are starting to build explicit review surfaces
+around AI-assisted work: review branches, audit APIs, readiness reports, and tighter handoffs
+between suggested changes and human approval.
+
+That matters for technical writers because the risk is no longer just bad prose. It is unclear
+governance. If docs are going to be drafted, updated, linted, and acted on by agents, teams need
+to know where the review happens, what gets logged, and how a person takes control before changes
+reach production.
+
+1. ReadMe is pushing documentation updates into the pull-request review loop
+
+On May 8, 2026, ReadMe announced GitHub AI Writer and a new @readme/cli. The two releases are more
+interesting together than separately. GitHub AI Writer watches pull requests, detects when docs need
+updating, and drafts those changes on a review branch in ReadMe with preview links posted back to
+the PR. The CLI adds linting, OpenAPI sync, local preview, and CI setup from the terminal.
+
+The important detail is the control model. ReadMe is not framing doc generation as an invisible
+background task. It is attaching proposed documentation changes to the same review surface where the
+product change is already being discussed. For technical writers, that is a strong pattern: keep the
+automation close to the code change, but keep publication behind an explicit branch review.
+
+2. GitHub is adding the governance layer that agentic review workflows need
+
+GitHub's May 18 and May 19 changelog updates point in the same direction. On May 18, GitHub
+introduced a REST API to audit a repository's Copilot cloud agent configuration, including MCP
+server configuration, enabled tools, workflow policy, and firewall settings. On May 19, GitHub
+updated Copilot code review so "Fix with Copilot" opens a dialog before the handoff, letting users
+choose how the change is applied, which model to use, and what additional instructions should guide
+the fix. Teams can also batch multiple review comments into one handoff.
+
+This is the kind of detail docs leaders should pay attention to. As soon as AI moves from draft
+assistance into workflow execution, auditability and choice become product requirements. Technical
+writers are increasingly working in the same environment: not just asking whether a draft exists,
+but whether the route from feedback to change is reviewable, configurable, and safe.
+
+3. Write the Docs is treating AI readiness as a practical audit exercise, not a slogan
+
+The strongest community signal this week came from the Write the Docs Portland 2026 Writing Day
+project list. One session invites attendees to bring a docs URL, run an AI readiness audit, and
+leave with a personalized report showing what AI can and cannot access or use. Another working
+session gives attendees a structured worksheet to review their own docs across structure,
+discoverability, AI readiness, and how well content stays in sync with the product.
+
+That is a meaningful shift in tone. The community conversation is moving away from abstract debate
+about whether AI matters for documentation and toward concrete inspection work. For technical
+writers, this is good news. It turns "AI strategy" into something documentarians already know how to
+do well: assess information architecture, identify weak points, prioritize fixes, and build a
+repeatable review process.
+
+4. GitBook's latest experiments show that human judgment is still the bottleneck worth designing for
+
+GitBook published two useful signals in mid-May. On May 13, it reported that AI agents accounted for
+51.8% of intentional documentation reads across sampled GitBook-hosted sites. Two days later, it
+published a detailed write-up on building a full docs site with Claude, MCP, and skill.md. The
+takeaway was not that the model replaced the documentation team. GitBook says its docs and skill
+file explained how to use features, but not always when or why to use them, and that the final layer
+of polish still required substantial human intervention.
+
+That combination matters. If AI is already a major reader of docs, teams do need clearer structure
+and machine-friendly access. But GitBook's own experiment reinforces that good documentation still
+depends on editorial judgment, intentional layouts, and context-specific decisions. The win is not
+"fully automated docs." The win is a system where machines can do more first-pass work while humans
+own the standards and the last mile.
+
+Why this week matters
+
+This week's pattern is governance, not novelty. The stronger documentation workflows are adding
+review branches, linting, audit APIs, configuration visibility, and explicit checkpoints before AI
+output becomes public or operational. That is a healthier direction than raw generation because it
+matches how good technical writing teams already work: draft, inspect, revise, and publish with
+clear ownership.
+
+If you manage documentation, a practical move this week is to map one AI-assisted workflow from end
+to end. Pick a real task such as updating a quickstart after a pull request, revising release notes,
+or applying review comments to API docs. Then document five things: what triggers the workflow, what
+inputs the agent sees, where the draft lands, who approves it, and what audit trail remains after it
+runs. If any of those steps are fuzzy, that is probably the gap to fix before scaling the workflow.
+
+Sources
+
+- ReadMe: "GitHub AI Writer, @readme/cli, and New Admin" (May 8, 2026) https://docs.readme.com/main/changelog/may-launch
+- GitHub Changelog: "Audit repository Copilot cloud agent configuration via the REST API" (May 18, 2026) https://github.blog/changelog/2026-05-18-audit-repository-copilot-cloud-agent-configuration-via-the-rest-api/
+- GitHub Changelog: "Easily apply Copilot code review feedback with Copilot cloud agent" (May 19, 2026) https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent/
+- Write the Docs Portland 2026: "What is Writing Day?" (AI readiness audit and docs review sessions) https://www.writethedocs.org/conf/portland/2026/writing-day/
+- GitBook Blog: "Research: AI agents are now the majority reader of your docs" (May 13, 2026) https://www.gitbook.com/blog/ai-docs-data-april-2026
+- GitBook Blog: "What we learned building a complete docs site using Claude, MCP and skill.md" (May 15, 2026) https://www.gitbook.com/blog/blog-building-documentation-with-claude-mcp-and-skill-md
