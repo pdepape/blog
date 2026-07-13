@@ -1,0 +1,18 @@
+Dedupe report for 2026-07-12-documentation-news-roundup
+Generated: 2026-07-13T15:30:37.786Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- skill.md workflows
+- AI documentation standards
+- structured docs economics
+- feedback-driven documentation
+- MCP server targeting
+
+This week avoids the earlier themes of docs metrics, review-branch governance, API friction, and information architecture by focusing on agent-facing knowledge packaging, measurable retrieval performance, and feedback-to-doc improvement loops.
+

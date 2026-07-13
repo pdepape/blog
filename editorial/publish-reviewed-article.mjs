@@ -43,9 +43,14 @@ async function main() {
       escapeHtml(issue.publishedEditorNote ?? issue.editorNote)
     );
 
+  const roundupTitle =
+    issue.pageTitle.toLowerCase() === issue.reviewTitle.toLowerCase()
+      ? issue.pageTitle
+      : issue.reviewTitle.replace(/^Documentation news roundup:\s*/i, "");
+
   const card = `          <article class="article-card" data-category="${escapeHtml(issue.indexCategory ?? "operations")}">
             <p class="article-meta">Weekly roundup</p>
-            <h3>Documentation news roundup: ${escapeHtml(issue.pageTitle.toLowerCase() === issue.reviewTitle.toLowerCase() ? issue.pageTitle : issue.reviewTitle.replace(/^Documentation news roundup:\\s*/i, ""))}</h3>
+            <h3>Documentation news roundup: ${escapeHtml(roundupTitle)}</h3>
             <p>${escapeHtml(issue.indexCardDescription ?? issue.heroCopy)}</p>
             <a href="articles/${escapeHtml(slug)}.html">Read the weekly roundup</a>
           </article>`;

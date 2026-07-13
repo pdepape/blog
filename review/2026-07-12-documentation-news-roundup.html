@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A weekly documentation news roundup covering human-reviewed skill files, AI-facing documentation standards, structured docs performance, and feedback-driven doc operations.">
+    <title>Skill files get real, standards settle in, and feedback loops tighten | TechDocs Studio</title>
+    <link rel="stylesheet" href="../styles.css?v=20260531">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <div class="nav-links nav-links-static">
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#system">System</a>
+          <a href="../index.html#articles">Articles</a>
+          <a class="nav-cta" href="../index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero">
+        <p class="eyebrow">Weekly documentation roundup</p>
+        <h1>Skill files get real, standards settle in, and feedback loops tighten</h1>
+        <p class="article-hero-copy">Week ending July 12, 2026. This draft tracks the documentation changes most likely to affect agent-facing content, feedback loops, and how technical writers package knowledge for both humans and tools.</p>
+        <p class="article-byline">Prepared July 12, 2026 for editorial review</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>This week's documentation signal is about packaging. Teams are no longer only polishing docs pages for human readers; they are also shaping the agent-facing files, standards, and feedback systems that tell AI tools how to use those docs safely.</p>
+            <p>That matters for technical writers because the durable work is shifting toward knowledge design. The differentiator is becoming less about producing another page and more about deciding how instructions should be structured, reviewed, retrieved, and improved over time.</p>
+
+            <section>
+              <h2>1. Skill files are moving from novelty to managed documentation assets</h2>
+              <p>On July 7, 2026, GitBook argued that the strongest `skill.md` workflow is neither pure auto-generation nor fully manual drafting. Its recommendation is a specialized AI first draft followed by human refinement, because the critical details that make an agent reliable often live outside public docs: edge cases, naming conventions, workflow judgment, and explicit do-not-do-this guidance.</p>
+              <p>That framing lines up with Mintlify's June 25 webinar recap featuring Anthropic's Claude Code documentation team. The emphasis there is not on publishing more content for its own sake. It is on turning user feedback into actionable documentation improvements with a system that helps the team decide what to change next.</p>
+              <p>For technical writers, the implication is clear: agent-facing instructions are becoming first-class documentation assets. They need authorship, review, and maintenance, not just generation. A good skill file now looks less like a one-off prompt and more like an operating manual that has to stay aligned with the product.</p>
+            </section>
+
+            <section>
+              <h2>2. Documentation standards are settling into the packaging layer</h2>
+              <p>GitBook's June 22 post on OKF, MCP, and `llms.txt` treats AI-facing standards as a baseline expectation rather than an experiment. The interesting part is not just that new standards exist. It is the claim that documentation teams should expect to support multiple machine-readable surfaces while the ecosystem decides which conventions become durable.</p>
+              <p>Its June 18 explainer on Google's Open Knowledge Format makes the same shift more concrete. OKF is presented as a markdown-based bundle with YAML frontmatter and explicit cross-links so an agent can traverse documentation deliberately instead of guessing across rendered pages.</p>
+              <p>ReadMe's June 12 changelog shows how this mindset is already landing in product details. MCP connection URLs can be pinned to a specific API server, and the docs editor now groups page options and metadata into a single settings panel. That is a small release on the surface, but it reflects a bigger pattern: documentation systems are being tuned as configuration surfaces for both readability and machine behavior.</p>
+            </section>
+
+            <section>
+              <h2>3. Structured docs now have measurable workflow and cost impact</h2>
+              <p>Mintlify's June 8 article is one of the more concrete pieces of evidence this summer. In controlled experiments, the company says structured docs improved agent precision by 64%, improved discoverability by 39%, cut token usage roughly in half, and sped up task completion by 1.5x compared with a no-docs baseline.</p>
+              <p>Those numbers matter because they move the conversation beyond generic claims that agents 'like' documentation. The value proposition becomes operational: better structure changes speed, accuracy, and cost. Documentation quality starts to look like infrastructure efficiency, not just editorial craft.</p>
+              <p>This is where the previous two themes connect. If standards define how knowledge is packaged and skill files define how tools should behave, then structured source docs define whether the whole stack performs reliably. Technical writers are increasingly being asked to own all three layers at once.</p>
+            </section>
+
+            <section>
+              <h2>Why this week matters</h2>
+              <p>This week's pattern is controlled agent usability. Documentation teams are being pushed to formalize instructions, expose knowledge through stable machine-readable layers, and close the loop between user feedback and the next documentation change.</p>
+              <p>If you own documentation this week, audit one agent-facing artifact, one machine-readable surface, and one feedback queue. Tighten the skill or instruction file, verify the MCP or export path that tools depend on, and turn one recurring piece of user confusion into a concrete docs update. That sequence is a practical way to improve both human documentation quality and AI behavior.</p>
+            </section>
+
+            <section>
+              <h2>Sources</h2>
+              <ul class="source-list">
+                <li><a href="https://www.gitbook.com/blog/ai-vs-human-skill-md">GitBook: The best way to build a skill.md: start with AI, finish with humans (July 7, 2026)</a></li>
+                <li><a href="https://www.mintlify.com/blog/how-claude-code-docs-team-uses-mintlify">Mintlify: How Claude Code's documentation team makes feedback actionable with Mintlify (June 25, 2026)</a></li>
+                <li><a href="https://www.gitbook.com/blog/supporting-ai-standards-gitbook">GitBook: Supporting AI standards at GitBook: What OKF, MCP and llms.txt tell us about the future of docs (June 22, 2026)</a></li>
+                <li><a href="https://www.gitbook.com/blog/what-is-okf-open-knowledge-format">GitBook: What is OKF? Understanding Google's Open Knowledge Format (June 18, 2026)</a></li>
+                <li><a href="https://docs.readme.com/main/changelog/typography-updates-page-settings-panel">ReadMe Changelog: Typography Updates, Page Settings Panel &amp; MCP Server Selection (June 12, 2026)</a></li>
+                <li><a href="https://www.mintlify.com/blog/structured-docs-coding-agents">Mintlify: Docs as an abstraction layer for coding agents (June 8, 2026)</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Article summary">
+            <div class="article-note">
+              <h2>Editor’s note</h2>
+              <p>Review-only draft. Edit the `.docx` or imported Google Doc before promoting this article into `articles/`.</p>
+            </div>
+
+            <div class="article-note">
+              <h2>What to watch next</h2>
+              <p>Whether documentation teams standardize agent-facing artifacts as rigorously as they already standardize style guides, reference pages, and review workflows.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
