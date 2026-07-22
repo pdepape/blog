@@ -1,0 +1,18 @@
+Dedupe report for 2026-07-19-documentation-news-roundup
+Generated: 2026-07-21T02:48:49.993Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- runtime-accurate API docs
+- branch-aware documentation review
+- self-updating references
+- documentation operating discipline
+- knowledge infrastructure
+
+This week avoids the earlier themes of skill files, AI standards packaging, feedback-loop optimization, review-branch governance as a control topic, and broad API-friction economics. The focus here is narrower and newer: runtime-correct reference behavior, clearer branch-facing editorial workflows, and documentation maintenance as release infrastructure.
+
