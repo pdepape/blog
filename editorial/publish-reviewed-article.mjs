@@ -154,7 +154,9 @@ async function main() {
   const roundupTitle =
     issue.pageTitle.toLowerCase() === issue.reviewTitle.toLowerCase()
       ? issue.pageTitle
-      : issue.reviewTitle.replace(/^Documentation news roundup:\s*/i, "");
+      : issue.reviewTitle
+          .replace(/^Documentation news roundup:\s*/i, "")
+          .replace(/^./, (character) => character.toUpperCase());
   const cardDescription = (issue.indexCardDescription ?? issue.heroCopy).replace(
     "This draft tracks",
     "This roundup tracks"
