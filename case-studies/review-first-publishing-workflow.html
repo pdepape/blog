@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="How TechDocs Studio turns a structured weekly issue into review artifacts and a published roundup while retaining editorial approval."
+    >
+    <title>Review-First Publishing Workflow | TechDocs Studio</title>
+    <link rel="canonical" href="https://techdocstudio.com/case-studies/review-first-publishing-workflow.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="TechDocs Studio">
+    <meta property="og:title" content="A Review-First Weekly Publishing Workflow">
+    <meta
+      property="og:description"
+      content="A first-party look at the structured source, review artifacts, and human approval gate behind the TechDocs Studio weekly roundup."
+    >
+    <meta
+      property="og:url"
+      content="https://techdocstudio.com/case-studies/review-first-publishing-workflow.html"
+    >
+    <meta property="og:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Review-First Weekly Publishing Workflow">
+    <meta
+      name="twitter:description"
+      content="How TechDocs Studio turns one structured issue into review artifacts and an approved published article."
+    >
+    <meta name="twitter:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../index.html#blog">Blog</a>
+          <a href="index.html" aria-current="page">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Start a conversation</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero" aria-labelledby="case-study-title">
+        <p class="eyebrow">Studio case study &middot; Editorial operations</p>
+        <h1 id="case-study-title">A review-first weekly publishing workflow</h1>
+        <p class="article-hero-copy">
+          TechDocs Studio built a small docs-as-code workflow that turns one structured weekly issue into
+          review-ready formats, checks for repeated angles, and publishes only after an editorial decision.
+        </p>
+        <p class="article-byline">First-party implementation by TechDocs Studio</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>
+              A weekly roundup has to move quickly, but speed is not the same as skipping review. The studio
+              needed a repeatable way to assemble source-backed reporting, give an editor practical review
+              formats, and keep draft material separate from the public article collection.
+            </p>
+
+            <section>
+              <h2>The challenge</h2>
+              <p>
+                The same issue needed to become several useful artifacts without copying content by hand.
+                Reviewers needed a browser preview and a Word document, the author needed a plain-text copy,
+                and publication required a finished HTML page plus an updated homepage feature.
+              </p>
+              <p>
+                The workflow also needed to surface possible overlap with earlier roundups. That check does not
+                decide whether an angle is acceptable; it gives the editor evidence to make that decision.
+              </p>
+            </section>
+
+            <section>
+              <h2>Constraints</h2>
+              <ul>
+                <li>The site is static and publishes without a content management system.</li>
+                <li>One structured issue file has to remain the source for titles, dates, summaries, and sources.</li>
+                <li>Draft output must remain visibly distinct from the published article collection.</li>
+                <li>Automation can prepare artifacts, but a person must approve publication.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>The approach</h2>
+              <ol>
+                <li>
+                  <strong>Structure the issue.</strong> Each roundup begins with a single issue definition for
+                  its metadata, editorial framing, sections, and source links.
+                </li>
+                <li>
+                  <strong>Generate review artifacts together.</strong> The generator creates text, HTML, and
+                  Word versions alongside a duplicate-risk report for editorial review.
+                </li>
+                <li>
+                  <strong>Review the content, not just the rendering.</strong> An editor checks claims, links,
+                  repeated angles, title treatment, and the distinction between source reporting and studio
+                  interpretation.
+                </li>
+                <li>
+                  <strong>Publish deliberately.</strong> After approval, the publishing step moves the reviewed
+                  HTML into the public article collection and refreshes the homepage roundup card.
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h2>What was built</h2>
+              <p>The repository now contains a concrete path from structured input to reviewed output:</p>
+              <ul>
+                <li>issue definitions for repeatable metadata and section structure;</li>
+                <li>a generator for plain-text, browser, Word, and duplicate-risk review artifacts;</li>
+                <li>a dedicated review area that keeps editorial work separate from public articles; and</li>
+                <li>a publishing step that creates the public article and updates its homepage entry.</li>
+              </ul>
+              <p>
+                The visible result is the studio&rsquo;s weekly roundup. The operational result is a process an
+                editor can inspect at each stage instead of a one-click black box.
+              </p>
+            </section>
+
+            <section>
+              <h2>What it demonstrates</h2>
+              <p>
+                This implementation shows how lightweight automation can remove format conversion and repeated
+                page assembly while preserving editorial responsibility. It does not demonstrate reduced cycle
+                time or improved readership yet; those outcomes require measurement across multiple issues.
+              </p>
+            </section>
+
+            <section>
+              <h2>What to measure next</h2>
+              <ul>
+                <li>Time from issue definition to editor-ready artifacts.</li>
+                <li>Number and type of changes requested during review.</li>
+                <li>Duplicate-risk flags that lead to a changed angle or source set.</li>
+                <li>Link, metadata, or rendering defects found after publication.</li>
+                <li>Reader engagement with the roundup archive over time.</li>
+              </ul>
+            </section>
+
+            <div class="page-actions">
+              <a class="button button-primary" href="../articles/2026-07-12-documentation-news-roundup.html">View a published roundup</a>
+              <a class="button button-secondary" href="index.html">All case studies</a>
+            </div>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Case study details">
+            <section class="article-note">
+              <h2>Project snapshot</h2>
+              <dl class="case-study-facts">
+                <div>
+                  <dt>Owner</dt>
+                  <dd>TechDocs Studio</dd>
+                </div>
+                <div>
+                  <dt>Format</dt>
+                  <dd>Static publishing workflow</dd>
+                </div>
+                <div>
+                  <dt>Human gate</dt>
+                  <dd>Editorial approval before publish</dd>
+                </div>
+                <div>
+                  <dt>Outputs</dt>
+                  <dd>Text, HTML, Word, and duplicate-risk report</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="article-note">
+              <h2>Evidence on this site</h2>
+              <p>
+                The <a href="../articles/2026-07-12-documentation-news-roundup.html">July 12 roundup</a> is a
+                published output, and the <a href="../index.html#blog">homepage blog feature</a> is the public
+                entry maintained by the workflow.
+              </p>
+            </section>
+
+            <section class="article-note">
+              <h2>Build a reviewable system</h2>
+              <p>
+                <a href="mailto:hello@techdocstudio.com">Email hello@techdocstudio.com</a> to discuss a
+                publishing workflow for your documentation team.
+              </p>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="index.html">All case studies</a></p>
+    </footer>
+
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>

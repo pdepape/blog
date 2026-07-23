@@ -74,7 +74,7 @@ surface in their own right.
 
 Sources
 
-- Mintlify: "Workflows, rebuilt" (April 29, 2026) https://www.mintlify.com/blog/workflows-rebuilt
+- Mintlify: "Automations, rebuilt" (April 29, 2026) https://www.mintlify.com/blog/automations-rebuilt
 - Mintlify: "Introducing the collaborative editor built for teams and agents" (April 29, 2026) https://www.mintlify.com/blog/editor
 - Tom Johnson: "Developing internal skills for recurring documentation processes like release notes" (May 4, 2026) https://idratherbewriting.com/blog/internal-skills-release-docs
 - Write the Docs: "Write the Docs Newsletter - May 2026" (May 5, 2026) https://www.writethedocs.org/blog/newsletter-may-2026/

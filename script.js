@@ -25,8 +25,12 @@ filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
 
-    filterButtons.forEach((item) => item.classList.remove("is-active"));
+    filterButtons.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-pressed", "false");
+    });
     button.classList.add("is-active");
+    button.setAttribute("aria-pressed", "true");
 
     articles.forEach((article) => {
       const shouldShow = filter === "all" || article.dataset.category === filter;
@@ -41,6 +45,7 @@ if (audit) {
   const checks = audit.querySelectorAll("[data-check]");
   const score = audit.querySelector("[data-score]");
   const progress = audit.querySelector("[data-progress]");
+  const progressTrack = audit.querySelector("[data-progress-track]");
 
   const updateScore = () => {
     const completed = Array.from(checks).filter((check) => check.checked).length;
@@ -48,6 +53,7 @@ if (audit) {
 
     score.textContent = `${percentage}%`;
     progress.style.width = `${percentage}%`;
+    progressTrack.setAttribute("aria-valuenow", String(percentage));
   };
 
   checks.forEach((check) => check.addEventListener("change", updateScore));

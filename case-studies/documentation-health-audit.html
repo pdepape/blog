@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="How TechDocs Studio turned five documentation operating signals into a lightweight, accessible, interactive health audit."
+    >
+    <title>Documentation Health Audit | TechDocs Studio</title>
+    <link rel="canonical" href="https://techdocstudio.com/case-studies/documentation-health-audit.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="TechDocs Studio">
+    <meta property="og:title" content="A Five-Signal Documentation Health Audit">
+    <meta
+      property="og:description"
+      content="A first-party look at how TechDocs Studio made a broad documentation-health conversation concrete and interactive."
+    >
+    <meta property="og:url" content="https://techdocstudio.com/case-studies/documentation-health-audit.html">
+    <meta property="og:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Five-Signal Documentation Health Audit">
+    <meta
+      name="twitter:description"
+      content="How TechDocs Studio turned documentation ownership, discovery, accuracy, launch, and feedback signals into a practical checklist."
+    >
+    <meta name="twitter:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../index.html#blog">Blog</a>
+          <a href="index.html" aria-current="page">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Start a conversation</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero" aria-labelledby="case-study-title">
+        <p class="eyebrow">Studio case study &middot; Documentation strategy</p>
+        <h1 id="case-study-title">A five-signal documentation health audit</h1>
+        <p class="article-hero-copy">
+          TechDocs Studio translated a broad documentation-health discussion into five observable operating
+          signals and a lightweight checklist that teams can use as a shared starting point.
+        </p>
+        <p class="article-byline">First-party implementation by TechDocs Studio</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>
+              Documentation audits can become long inventories before a team agrees on the problem it is trying
+              to solve. The studio wanted a smaller entry point: enough structure to start a useful conversation
+              about operations without presenting a five-item checklist as a complete assessment.
+            </p>
+
+            <section>
+              <h2>The challenge</h2>
+              <p>
+                Documentation quality crosses ownership, findability, technical accuracy, launch coordination,
+                and feedback. A homepage tool had to make those dimensions concrete in a few minutes, without
+                asking visitors to submit product information or treating a simple score as a diagnosis.
+              </p>
+            </section>
+
+            <section>
+              <h2>Constraints</h2>
+              <ul>
+                <li>The interaction had to work within a static site with no account or backend.</li>
+                <li>Every item needed a plain-language statement that a product team could verify.</li>
+                <li>The checklist had to be keyboard-accessible and usable on narrow screens.</li>
+                <li>No answers could be stored, transmitted, or presented as a formal benchmark.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>The approach</h2>
+              <p>The audit uses one observable signal from each of five operating areas:</p>
+              <ol>
+                <li><strong>Ownership:</strong> key product areas have an owner and review cadence.</li>
+                <li><strong>Discovery:</strong> important search terms map to clear documentation pages.</li>
+                <li><strong>Accuracy:</strong> API examples are tested against current product behavior.</li>
+                <li><strong>Launch alignment:</strong> release notes connect readers to affected guidance.</li>
+                <li><strong>Feedback:</strong> support tickets feed a recurring documentation backlog.</li>
+              </ol>
+              <p>
+                Each checked item contributes equally to a visible readiness percentage. Equal weighting keeps
+                the interaction understandable, but it is a design simplification rather than a claim that all
+                five signals carry the same risk for every product.
+              </p>
+            </section>
+
+            <section>
+              <h2>What was built</h2>
+              <p>
+                The finished component combines native checkbox labels, a numeric score, and a progress bar.
+                A small shared script recalculates the percentage in the browser whenever an answer changes.
+                The answers remain on the visitor&rsquo;s device for the current page session and are not sent to
+                TechDocs Studio.
+              </p>
+              <p>
+                The surrounding copy positions the result as a fast readiness signal. It invites a team to ask
+                where deeper review is needed rather than implying that the percentage certifies documentation
+                quality.
+              </p>
+            </section>
+
+            <section>
+              <h2>What it demonstrates</h2>
+              <p>
+                The audit demonstrates how a documentation strategy can be reduced to a focused interactive
+                entry point without hiding its limitations. It does not demonstrate improved support volume,
+                product adoption, or documentation accuracy; those outcomes would require baseline data and a
+                longer engagement.
+              </p>
+            </section>
+
+            <section>
+              <h2>What to measure next</h2>
+              <ul>
+                <li>Which signals teams most often identify as missing.</li>
+                <li>Whether the checklist leads to a deeper audit or a defined improvement backlog.</li>
+                <li>Changes in search dead ends, stale examples, and documentation-related support tickets.</li>
+                <li>Completion of ownership and review-cadence actions after an audit.</li>
+                <li>Whether different product types require different signal weights or additional checks.</li>
+              </ul>
+            </section>
+
+            <div class="page-actions">
+              <a class="button button-primary" href="../index.html#audit">Try the homepage audit</a>
+              <a class="button button-secondary" href="index.html">All case studies</a>
+            </div>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Case study details">
+            <section class="article-note">
+              <h2>Project snapshot</h2>
+              <dl class="case-study-facts">
+                <div>
+                  <dt>Owner</dt>
+                  <dd>TechDocs Studio</dd>
+                </div>
+                <div>
+                  <dt>Format</dt>
+                  <dd>Interactive static-site checklist</dd>
+                </div>
+                <div>
+                  <dt>Signals</dt>
+                  <dd>Ownership, discovery, accuracy, launch, and feedback</dd>
+                </div>
+                <div>
+                  <dt>Data handling</dt>
+                  <dd>No answers stored or transmitted</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="article-note">
+              <h2>Evidence on this site</h2>
+              <p>
+                The <a href="../index.html#audit">live homepage audit</a> contains the five checklist statements,
+                score calculation, and progress indicator described here.
+              </p>
+            </section>
+
+            <section class="article-note">
+              <h2>Plan a deeper audit</h2>
+              <p>
+                <a href="mailto:hello@techdocstudio.com">Email hello@techdocstudio.com</a> to discuss the scope
+                and evidence needed for your documentation set.
+              </p>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="index.html">All case studies</a></p>
+    </footer>
+
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>

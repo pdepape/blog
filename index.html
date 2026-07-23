@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A practical technical documentation site for product teams, developers, and support teams shipping modern technology products."
+      content="Practical technical documentation guidance, weekly reporting, and studio case studies for teams shipping modern technology products."
     >
     <title>TechDocs Studio | Technical Documentation for Product Teams</title>
+    <link rel="canonical" href="https://techdocstudio.com/">
     <link rel="preconnect" href="https://upload.wikimedia.org">
-    <link rel="stylesheet" href="styles.css?v=20260509">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TechDocs Studio">
+    <meta property="og:title" content="TechDocs Studio | Technical Documentation for Product Teams">
+    <meta property="og:description" content="Practical documentation guidance, weekly reporting, and evidence-backed studio case studies for technical teams.">
+    <meta property="og:url" content="https://techdocstudio.com/">
+    <meta property="og:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TechDocs Studio | Technical Documentation for Product Teams">
+    <meta name="twitter:description" content="Practical documentation guidance, weekly reporting, and evidence-backed studio case studies for technical teams.">
+    <meta name="twitter:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <link rel="stylesheet" href="styles.css?v=20260722">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -29,9 +40,9 @@
         </button>
 
         <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="#blog">Blog</a>
+          <a href="#case-studies">Case studies</a>
           <a href="#coverage">Coverage</a>
-          <a href="#system">System</a>
-          <a href="#articles">Articles</a>
           <a href="#audit">Audit</a>
           <a class="nav-cta" href="#contact">Start a doc audit</a>
         </div>
@@ -54,9 +65,40 @@
             developers, and support teams to find the right answer fast.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#coverage">Explore the site</a>
-            <a class="button button-secondary" href="#audit">Run the checklist</a>
+            <a class="button button-primary" href="#blog">Read the latest</a>
+            <a class="button button-secondary" href="blog/">Browse the archive</a>
           </div>
+        </div>
+      </section>
+
+      <section class="section articles-section" id="blog" aria-labelledby="blog-title">
+        <div class="blog-heading">
+          <div>
+            <p class="eyebrow">The TechDocs Studio blog</p>
+            <h2 id="blog-title">Practical reporting for people who build and maintain technical documentation</h2>
+            <p>
+              Weekly signals from the docs ecosystem, plus field-tested patterns for developer education,
+              content operations, and product guidance.
+            </p>
+          </div>
+          <a class="text-link" href="blog/">View all posts <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="article-grid article-grid-featured">
+          <!-- latest-roundup:start -->
+          <article class="article-card article-card-featured" data-category="operations" data-featured-roundup>
+            <p class="article-meta">Latest roundup &middot; July 12, 2026</p>
+            <h3>Skill files get real, standards settle in, and feedback loops tighten</h3>
+            <p>Why skill files, packaging standards, and doc-feedback systems are becoming part of the documentation operating model.</p>
+            <a href="articles/2026-07-12-documentation-news-roundup.html">Read the latest roundup</a>
+          </article>
+          <!-- latest-roundup:end -->
+          <article class="article-card" data-category="operations">
+            <p class="article-meta">From the archive &middot; May 9, 2026</p>
+            <h3>Agent-ready docs, collaborative editors, and release-note automation</h3>
+            <p>How repeatable automation and agent-ready structure are changing the day-to-day work of documentation teams.</p>
+            <a href="articles/2026-05-09-documentation-news-roundup.html">Read the roundup</a>
+          </article>
         </div>
       </section>
 
@@ -150,45 +192,40 @@
         </div>
       </section>
 
-      <section class="section articles-section" id="articles" aria-labelledby="articles-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">Featured articles</p>
-          <h2 id="articles-title">Weekly reporting and practical documentation guides</h2>
+      <section class="section case-studies-section" id="case-studies" aria-labelledby="case-studies-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Studio case studies</p>
+            <h2 id="case-studies-title">Real systems, documented from the work</h2>
+          </div>
+          <p>
+            These first-party examples show the decisions and implementation behind this studio&rsquo;s own
+            publishing and documentation tools. No borrowed logos, invented clients, or unsupported results.
+          </p>
         </div>
 
-        <div class="article-filters" aria-label="Filter articles">
-          <button class="filter-button is-active" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter="developer">Developer</button>
-          <button class="filter-button" type="button" data-filter="product">Product</button>
-          <button class="filter-button" type="button" data-filter="operations">Operations</button>
+        <div class="case-study-grid">
+          <article class="case-study-card">
+            <p class="case-study-meta">Editorial operations</p>
+            <h3>A review-first weekly publishing workflow</h3>
+            <p>
+              A structured source produces a duplicate-risk report, browser preview, Word review copy, and
+              published article page while keeping editorial approval in the loop.
+            </p>
+            <a href="case-studies/review-first-publishing-workflow.html">Read the case study</a>
+          </article>
+          <article class="case-study-card case-study-card-accent">
+            <p class="case-study-meta">Documentation strategy</p>
+            <h3>A five-signal documentation health audit</h3>
+            <p>
+              A broad documentation-health conversation became an accessible interactive checklist that gives
+              product teams a fast, shared starting point.
+            </p>
+            <a href="case-studies/documentation-health-audit.html">Read the case study</a>
+          </article>
         </div>
 
-        <div class="article-grid" data-articles>
-          <article class="article-card" data-category="operations">
-            <p class="article-meta">Weekly roundup</p>
-            <h3>Documentation news roundup: skill files get real, standards settle in, and feedback loops tighten</h3>
-            <p>Why skill files, packaging standards, and doc-feedback systems are becoming part of the documentation operating model.</p>
-            <a href="articles/2026-07-12-documentation-news-roundup.html">Read the weekly roundup</a>
-          </article>
-          <article class="article-card" data-category="developer">
-            <p class="article-meta">Developer docs</p>
-            <h3>How to structure an API quickstart that developers actually finish</h3>
-            <p>Turn authentication, first calls, error handling, and next steps into one focused first win.</p>
-            <a href="#contact">Request this guide</a>
-          </article>
-          <article class="article-card" data-category="product">
-            <p class="article-meta">Product docs</p>
-            <h3>Designing admin guides for complex SaaS configuration</h3>
-            <p>Help operators understand permissions, defaults, dependencies, and rollout decisions.</p>
-            <a href="#contact">Request this guide</a>
-          </article>
-          <article class="article-card" data-category="operations">
-            <p class="article-meta">Content operations</p>
-            <h3>Building a docs review cycle that survives weekly releases</h3>
-            <p>Assign ownership, define update triggers, and connect product changes to documentation work.</p>
-            <a href="#contact">Request this guide</a>
-          </article>
-        </div>
+        <a class="text-link section-link" href="case-studies/">View all case studies <span aria-hidden="true">&rarr;</span></a>
       </section>
 
       <section class="section audit-section" id="audit" aria-labelledby="audit-title">
@@ -204,8 +241,16 @@
         <div class="audit-tool" data-audit>
           <div class="audit-score">
             <span class="score-label">Readiness</span>
-            <strong data-score>0%</strong>
-            <div class="score-track" aria-hidden="true">
+            <strong data-score aria-live="polite">0%</strong>
+            <div
+              class="score-track"
+              role="progressbar"
+              aria-label="Documentation readiness"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              data-progress-track
+            >
               <span data-progress></span>
             </div>
           </div>
@@ -267,18 +312,18 @@
           <p class="eyebrow">Work with the site</p>
           <h2 id="contact-title">Turn product knowledge into documentation people can use.</h2>
         </div>
-        <a class="button button-primary" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+        <a class="button button-primary" href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>TechDocs Studio. Built for GitHub Pages.</p>
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
       <p>
         Hero image:
         <a href="https://commons.wikimedia.org/wiki/File:Laptop_on_a_desk_(Unsplash).jpg">Wikimedia Commons</a>.
       </p>
     </footer>
 
-    <script src="script.js?v=20260509"></script>
+    <script src="script.js?v=20260722"></script>
   </body>
 </html>

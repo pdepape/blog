@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://techdocstudio.com/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://techdocstudio.com/blog/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <!-- published-articles:start -->
+  <url>
+    <loc>https://techdocstudio.com/articles/2026-07-12-documentation-news-roundup.html</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://techdocstudio.com/articles/2026-05-09-documentation-news-roundup.html</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  <!-- published-articles:end -->
+  <url>
+    <loc>https://techdocstudio.com/case-studies/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://techdocstudio.com/case-studies/review-first-publishing-workflow.html</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://techdocstudio.com/case-studies/documentation-health-audit.html</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+</urlset>

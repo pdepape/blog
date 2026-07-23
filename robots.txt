@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /editorial/
+Disallow: /review/
+
+Sitemap: https://techdocstudio.com/sitemap.xml

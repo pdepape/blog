@@ -203,24 +203,33 @@ ${paragraphs}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${escapeHtml(issue.metaDescription)}">
+    <meta name="robots" content="noindex, nofollow">
     <title>${escapeHtml(issue.pageTitle)} | TechDocs Studio</title>
-    <link rel="stylesheet" href="../styles.css?v=20260531">
+    <link rel="stylesheet" href="../styles.css?v=20260722">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
+    <header class="site-header" data-menu>
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
           <span class="brand-mark" aria-hidden="true">TD</span>
           <span>TechDocs Studio</span>
         </a>
 
-        <div class="nav-links nav-links-static">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../blog/">Blog</a>
+          <a href="../case-studies/">Case studies</a>
           <a href="../index.html#coverage">Coverage</a>
-          <a href="../index.html#system">System</a>
-          <a href="../index.html#articles">Articles</a>
-          <a class="nav-cta" href="../index.html#contact">Contact</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Contact</a>
         </div>
       </nav>
     </header>
@@ -267,6 +276,11 @@ ${sourceItems}
         </div>
       </article>
     </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="../blog/">Back to the blog</a></p>
+    </footer>
+    <script src="../script.js?v=20260722"></script>
   </body>
 </html>
 `;
