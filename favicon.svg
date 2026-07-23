@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TechDocs Studio">
+  <rect width="64" height="64" rx="14" fill="#182321"/>
+  <path d="M17 13h22l9 9v29H17z" fill="#007a68"/>
+  <path d="M39 13v10h9" fill="none" stroke="#75dac8" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M24 31h17M24 38h17M24 45h11" stroke="#f7f8f6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="17" cy="51" r="5" fill="#f0b429"/>
+</svg>
