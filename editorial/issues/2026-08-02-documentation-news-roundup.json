@@ -1,0 +1,83 @@
+{
+  "slug": "2026-08-02-documentation-news-roundup",
+  "banner": "TECHDOCS STUDIO REVIEW DRAFT",
+  "dateDisplay": "August 2, 2026",
+  "reviewTitle": "Documentation news roundup: drafting gets automated, review hardens, and trust moves upstream",
+  "pageTitle": "Drafting gets automated, review hardens, and trust moves upstream",
+  "metaDescription": "A weekly documentation news roundup on AI-first maintenance, formal review checklists, docs-as-code discipline, prompt-injection risk, and new transparency artifacts for technical writing teams.",
+  "heroCopy": "Week ending August 2, 2026. This draft tracks the documentation changes most likely to affect review discipline, AI-assisted maintenance, and the trust responsibilities now landing on technical writing teams.",
+  "editorNote": "Review-only draft. Edit the `.docx` before promoting this article into `articles/`.",
+  "publishedEditorNote": "This post is part of the weekly TechDocs Studio roundup tracking documentation operations, tooling, and editorial strategy shifts that matter to technical writers.",
+  "watchNext": "Whether documentation teams formalize review gates, content sanitization, and transparency artifacts before AI-assisted documentation scales any further.",
+  "indexCardDescription": "Why faster draft generation is pushing technical writers toward verification, safety, and transparency work.",
+  "indexCategory": "operations",
+  "focusTerms": [
+    "AI-first docs maintenance",
+    "AI-generated docs review",
+    "prompt injection in documentation",
+    "system cards and datasheets",
+    "docs-as-code verification"
+  ],
+  "noveltyNote": "This week avoids the recent focus on search metrics, API drift detection, branch review mechanics, and agent-facing packaging as the main story. The new angle is assurance: AI speeding up draft maintenance while technical writers absorb more responsibility for verification, safety checks, and transparency documentation.",
+  "intro": [
+    "This week's documentation signal is about assurance work. The interesting change is not that AI can produce more text. It is that once drafting speeds up, the hard problem moves into verification: checking source truth, preventing unsafe content from flowing downstream, and documenting enough context for other humans and systems to trust what they are reading.",
+    "That matters for technical writers because the role keeps moving away from blank-page production and toward release discipline. Writers are increasingly expected to review machine-assisted changes, guard the content pipeline, and produce the artifacts that explain how a system behaves and where it should not be trusted."
+  ],
+  "sections": [
+    {
+      "heading": "AI can compress maintenance, but it also makes review the real work",
+      "paragraphs": [
+        "GitBook's July 21, 2026 article on AI-first workflows to maintain technical docs 20 times faster is useful because it describes a credible split of labor. The agent handles typo hunting, FAQ drafting, glossary generation, and stale-example checks, then humans review the diff before merge. That is not 'AI replaced documentation.' It is a faster maintenance loop with human judgment preserved at the release gate.",
+        "Document360's July 8, 2026 checklist for reviewing AI-generated documentation sharpens the same point from the editor's side. It argues that teams need a single source of truth, risk-based review depth, and separate passes for accuracy, structure, and style because fluent prose can still hide hallucinated endpoints, stale flags, or invented references. In other words, faster generation increases the importance of a deliberate review method.",
+        "For technical writers, the practical takeaway is that review is becoming a first-class operating system. The differentiator is less about who can draft quickly and more about who can verify quickly without lowering the standard for factual correctness."
+      ]
+    },
+    {
+      "heading": "The old docs-as-code fundamentals are returning as hard requirements",
+      "paragraphs": [
+        "ReadMe's July 21, 2026 guide to writing, maintaining, and scaling API documentation sounds basic on the surface, but its most important claim is procedural: accurate docs have to be treated like code, version-controlled, reviewed, and updated as part of every release. That is increasingly the only workable answer once AI tools make it easy to generate or revise documentation at high speed.",
+        "What changes is not the principle but the pressure behind it. When generated content can arrive faster than a team can inspect it, version control and release-coupled review stop being nice process habits and become the only practical way to preserve trust. Changelogs, working examples, and complete reference material become evidence that the review loop is real, not just promised.",
+        "That should feel familiar to experienced writers, but the context is different now. The craft signal this week is that documentation discipline is being reasserted under automation pressure, which gives technical writers more leverage if they insist on traceability, review, and source-backed examples."
+      ]
+    },
+    {
+      "heading": "Documentation now has to support both safety controls and transparency artifacts",
+      "paragraphs": [
+        "Document360's July 17, 2026 piece on prompt injection reframes documentation as executable input rather than passive reference. If AI agents and copilots retrieve a knowledge base directly, then hidden instructions, untrusted content, or sloppy publishing pipelines can turn documentation into part of the attack surface. That is a meaningful shift because content quality and content safety start to converge.",
+        "Its July 24, 2026 guide to system cards and datasheets points at the other side of the trust problem. Writers are not only being asked to prevent harmful content from reaching agents. They are also being asked to create transparency documents that explain model behavior, limitations, evaluation methods, and intended use in language other readers can actually assess. That is technical documentation, even if it does not look like a conventional product manual.",
+        "Taken together, those two pieces suggest that documentation trust is moving upstream. The writer's job is increasingly to make sure content is safe enough to feed into systems and explicit enough to explain what those systems can and cannot be trusted to do."
+      ]
+    }
+  ],
+  "whyThisWeekMatters": [
+    "This week's pattern is verification pressure. As AI speeds up documentation maintenance, teams are strengthening the review process, tightening release discipline, and treating trust artifacts and content safety as part of the documentation workload instead of as adjacent concerns.",
+    "If you own documentation this week, audit one AI-assisted review flow for source-of-truth gaps, one published content path for unsafe or untrusted inputs, and one product area that may soon need a transparency-style artifact rather than another ordinary help page."
+  ],
+  "sources": [
+    {
+      "label": "GitBook Blog: How to use AI-first workflows to maintain technical docs 20x faster",
+      "date": "July 21, 2026",
+      "url": "https://www.gitbook.com/blog/distributional-ai-docs-workflow"
+    },
+    {
+      "label": "Document360: AI-Generated Documentation Review: The Complete QA Checklist",
+      "date": "July 8, 2026",
+      "url": "https://document360.com/blog/ai-generated-documentation-review-checklist/"
+    },
+    {
+      "label": "ReadMe Blog: Best Practices for API Documentation: How to Write, Maintain, and Scale Your Docs",
+      "date": "July 21, 2026",
+      "url": "https://readme.com/blog/best-practices-for-creating-api-documentation"
+    },
+    {
+      "label": "Document360: Prompt Injection: Securing Your AI-Connected Knowledge Base",
+      "date": "July 17, 2026",
+      "url": "https://document360.com/blog/prompt-injection/"
+    },
+    {
+      "label": "Document360: System Cards and Datasheets: A Technical Writer’s Guide",
+      "date": "July 24, 2026",
+      "url": "https://document360.com/blog/system-cards-and-datasheets/"
+    }
+  ]
+}

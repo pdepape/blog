@@ -1,0 +1,18 @@
+Dedupe report for 2026-08-02-documentation-news-roundup
+Generated: 2026-08-03T14:00:56.864Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- AI-first docs maintenance
+- AI-generated docs review
+- prompt injection in documentation
+- system cards and datasheets
+- docs-as-code verification
+
+This week avoids the recent focus on search metrics, API drift detection, branch review mechanics, and agent-facing packaging as the main story. The new angle is assurance: AI speeding up draft maintenance while technical writers absorb more responsibility for verification, safety checks, and transparency documentation.
+

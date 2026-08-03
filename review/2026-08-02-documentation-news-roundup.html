@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A weekly documentation news roundup on AI-first maintenance, formal review checklists, docs-as-code discipline, prompt-injection risk, and new transparency artifacts for technical writing teams.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Drafting gets automated, review hardens, and trust moves upstream | TechDocs Studio</title>
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../blog/">Blog</a>
+          <a href="../case-studies/">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero">
+        <p class="eyebrow">Weekly documentation roundup</p>
+        <h1>Drafting gets automated, review hardens, and trust moves upstream</h1>
+        <p class="article-hero-copy">Week ending August 2, 2026. This draft tracks the documentation changes most likely to affect review discipline, AI-assisted maintenance, and the trust responsibilities now landing on technical writing teams.</p>
+        <p class="article-byline">Prepared August 2, 2026 for editorial review</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>This week's documentation signal is about assurance work. The interesting change is not that AI can produce more text. It is that once drafting speeds up, the hard problem moves into verification: checking source truth, preventing unsafe content from flowing downstream, and documenting enough context for other humans and systems to trust what they are reading.</p>
+            <p>That matters for technical writers because the role keeps moving away from blank-page production and toward release discipline. Writers are increasingly expected to review machine-assisted changes, guard the content pipeline, and produce the artifacts that explain how a system behaves and where it should not be trusted.</p>
+
+            <section>
+              <h2>1. AI can compress maintenance, but it also makes review the real work</h2>
+              <p>GitBook's July 21, 2026 article on AI-first workflows to maintain technical docs 20 times faster is useful because it describes a credible split of labor. The agent handles typo hunting, FAQ drafting, glossary generation, and stale-example checks, then humans review the diff before merge. That is not 'AI replaced documentation.' It is a faster maintenance loop with human judgment preserved at the release gate.</p>
+              <p>Document360's July 8, 2026 checklist for reviewing AI-generated documentation sharpens the same point from the editor's side. It argues that teams need a single source of truth, risk-based review depth, and separate passes for accuracy, structure, and style because fluent prose can still hide hallucinated endpoints, stale flags, or invented references. In other words, faster generation increases the importance of a deliberate review method.</p>
+              <p>For technical writers, the practical takeaway is that review is becoming a first-class operating system. The differentiator is less about who can draft quickly and more about who can verify quickly without lowering the standard for factual correctness.</p>
+            </section>
+
+            <section>
+              <h2>2. The old docs-as-code fundamentals are returning as hard requirements</h2>
+              <p>ReadMe's July 21, 2026 guide to writing, maintaining, and scaling API documentation sounds basic on the surface, but its most important claim is procedural: accurate docs have to be treated like code, version-controlled, reviewed, and updated as part of every release. That is increasingly the only workable answer once AI tools make it easy to generate or revise documentation at high speed.</p>
+              <p>What changes is not the principle but the pressure behind it. When generated content can arrive faster than a team can inspect it, version control and release-coupled review stop being nice process habits and become the only practical way to preserve trust. Changelogs, working examples, and complete reference material become evidence that the review loop is real, not just promised.</p>
+              <p>That should feel familiar to experienced writers, but the context is different now. The craft signal this week is that documentation discipline is being reasserted under automation pressure, which gives technical writers more leverage if they insist on traceability, review, and source-backed examples.</p>
+            </section>
+
+            <section>
+              <h2>3. Documentation now has to support both safety controls and transparency artifacts</h2>
+              <p>Document360's July 17, 2026 piece on prompt injection reframes documentation as executable input rather than passive reference. If AI agents and copilots retrieve a knowledge base directly, then hidden instructions, untrusted content, or sloppy publishing pipelines can turn documentation into part of the attack surface. That is a meaningful shift because content quality and content safety start to converge.</p>
+              <p>Its July 24, 2026 guide to system cards and datasheets points at the other side of the trust problem. Writers are not only being asked to prevent harmful content from reaching agents. They are also being asked to create transparency documents that explain model behavior, limitations, evaluation methods, and intended use in language other readers can actually assess. That is technical documentation, even if it does not look like a conventional product manual.</p>
+              <p>Taken together, those two pieces suggest that documentation trust is moving upstream. The writer's job is increasingly to make sure content is safe enough to feed into systems and explicit enough to explain what those systems can and cannot be trusted to do.</p>
+            </section>
+
+            <section>
+              <h2>Why this week matters</h2>
+              <p>This week's pattern is verification pressure. As AI speeds up documentation maintenance, teams are strengthening the review process, tightening release discipline, and treating trust artifacts and content safety as part of the documentation workload instead of as adjacent concerns.</p>
+              <p>If you own documentation this week, audit one AI-assisted review flow for source-of-truth gaps, one published content path for unsafe or untrusted inputs, and one product area that may soon need a transparency-style artifact rather than another ordinary help page.</p>
+            </section>
+
+            <section>
+              <h2>Sources</h2>
+              <ul class="source-list">
+                <li><a href="https://www.gitbook.com/blog/distributional-ai-docs-workflow">GitBook Blog: How to use AI-first workflows to maintain technical docs 20x faster (July 21, 2026)</a></li>
+                <li><a href="https://document360.com/blog/ai-generated-documentation-review-checklist/">Document360: AI-Generated Documentation Review: The Complete QA Checklist (July 8, 2026)</a></li>
+                <li><a href="https://readme.com/blog/best-practices-for-creating-api-documentation">ReadMe Blog: Best Practices for API Documentation: How to Write, Maintain, and Scale Your Docs (July 21, 2026)</a></li>
+                <li><a href="https://document360.com/blog/prompt-injection/">Document360: Prompt Injection: Securing Your AI-Connected Knowledge Base (July 17, 2026)</a></li>
+                <li><a href="https://document360.com/blog/system-cards-and-datasheets/">Document360: System Cards and Datasheets: A Technical Writer’s Guide (July 24, 2026)</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Article summary">
+            <div class="article-note">
+              <h2>Editor’s note</h2>
+              <p>Review-only draft. Edit the `.docx` before promoting this article into `articles/`.</p>
+            </div>
+
+            <div class="article-note">
+              <h2>What to watch next</h2>
+              <p>Whether documentation teams formalize review gates, content sanitization, and transparency artifacts before AI-assisted documentation scales any further.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="../blog/">Back to the blog</a></p>
+    </footer>
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>

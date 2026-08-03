@@ -1,0 +1,18 @@
+Dedupe report for 2026-07-26-documentation-news-roundup
+Generated: 2026-07-26T19:07:11.396Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- documentation metrics quality
+- API drift detection
+- docs governance
+- content reuse strategy
+- AI-facing documentation delivery
+
+This week avoids the earlier focus on runtime-correct references, branch-review mechanics, skill-file packaging, and self-updating docs as the main story. The new angle is governance: separating internal noise from user signal, treating drift as an explicit control problem, and deciding who owns reusable, exportable, AI-consumable documentation over time.
+
