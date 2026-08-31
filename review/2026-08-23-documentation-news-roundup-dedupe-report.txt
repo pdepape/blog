@@ -1,0 +1,18 @@
+Dedupe report for 2026-08-23-documentation-news-roundup
+Generated: 2026-08-25T21:22:06.964Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- queryable llms.txt delivery
+- built-in docs MCP servers
+- documentation retrieval layers
+- CLI-first documentation setup
+- dual-track documentation metrics
+
+This week avoids the recent focus on branch review mechanics, API drift, verification loops, and skill files as the main story. The new angle is delivery operations: documentation platforms are turning docs into addressable machine endpoints, moving setup work into automation-friendly commands, and forcing teams to separate improvement metrics from budget-proof metrics.
+

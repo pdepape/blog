@@ -10,6 +10,7 @@ const execFileAsync = promisify(execFile);
 
 const repoRoot = process.cwd();
 const reviewDir = path.join(repoRoot, "review");
+const issuesDir = path.join(repoRoot, "editorial", "issues");
 
 function slugify(value) {
   return value
@@ -77,25 +78,20 @@ async function readJson(filePath) {
 }
 
 async function getPreviousRoundups(currentSlug) {
-  const entries = await fs.readdir(reviewDir);
+  const entries = await fs.readdir(issuesDir);
   const files = entries
-    .filter((entry) => entry.endsWith("-documentation-news-roundup.txt"))
-    .filter((entry) => entry !== `${currentSlug}.txt`)
+    .filter((entry) => entry.endsWith("-documentation-news-roundup.json"))
+    .filter((entry) => entry !== `${currentSlug}.json`)
     .sort();
 
   const results = [];
 
   for (const file of files) {
-    const fullPath = path.join(reviewDir, file);
-    const raw = await fs.readFile(fullPath, "utf8");
-    const lines = raw.split("\n").map((line) => line.trim()).filter(Boolean);
-    const title = lines[2] ?? file.replace(/\.txt$/, "");
-    const urls = [...raw.matchAll(/https?:\/\/\S+/g)].map((match) => match[0]);
+    const issue = await readJson(path.join(issuesDir, file));
     results.push({
       file,
-      title,
-      raw,
-      urls,
+      title: issue.reviewTitle ?? issue.pageTitle ?? issue.slug ?? file.replace(/\.json$/, ""),
+      urls: (issue.sources ?? []).map((source) => source.url).filter(Boolean),
     });
   }
 
