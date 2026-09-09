@@ -1,0 +1,18 @@
+Dedupe report for 2026-09-06-documentation-news-roundup
+Generated: 2026-09-06T18:16:18.161Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- documentation deployment recovery
+- instant documentation rollbacks
+- multiplayer documentation editing
+- source-faithful editor diffs
+- multi-protocol API reference architecture
+
+This issue does not repeat the August 23 focus on queryable endpoints, CLI-first setup, or analytics. Its new angle is operational resilience: documentation platforms are adding recovery controls, safer simultaneous editing, and renderer architectures that can absorb several specification formats without fragmenting the reader experience.
+

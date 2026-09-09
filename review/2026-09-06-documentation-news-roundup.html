@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A weekly documentation news roundup on instant rollbacks, multiplayer editing, source-faithful diffs, structured retrieval, and multi-protocol API reference architecture.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Publishing gets a recovery plan, editing becomes multiplayer, and API references outgrow one format | TechDocs Studio</title>
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../blog/">Blog</a>
+          <a href="../case-studies/">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero">
+        <p class="eyebrow">Weekly documentation roundup</p>
+        <h1>Publishing gets a recovery plan, editing becomes multiplayer, and API references outgrow one format</h1>
+        <p class="article-hero-copy">Week ending September 6, 2026. This draft tracks the documentation shifts most likely to change how technical writers recover from bad releases, collaborate without corrupting source history, and design references across multiple API protocols.</p>
+        <p class="article-byline">Prepared September 6, 2026 for editorial review</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>This week's documentation signal is maturity. The notable releases are less about generating another page and more about what happens when a documentation system is large, shared, and important enough to fail in consequential ways.</p>
+            <p>For technical writers, that shifts the operating question. Publishing is no longer complete when content reaches production. A credible docs workflow also needs a recovery path, collaboration rules that preserve source history, and an information model that can support several kinds of technical interface without forcing readers through separate islands.</p>
+
+            <section>
+              <h2>1. Documentation publishing now needs a recovery objective</h2>
+              <p>Mintlify's August 31 release of Instant Rollbacks makes a production documentation failure an explicit operational event. Enterprise teams can restore one of their last ten successful public-site builds in seconds, instead of reverting source and waiting through a rebuild that Mintlify says could take up to 20 minutes on a large site. The rollback also lands in the audit log, preserving who restored which build and when.</p>
+              <p>The important idea is not a dashboard button. It is that documentation now has a recovery-time expectation. Preview builds, strict validation, broken-link checks, style linting, protected branches, and required review reduce the likelihood of failure; rollback limits the damage when those controls still miss something.</p>
+              <p>Technical writers should treat this like any other release-safety question: identify who can roll back, decide what qualifies as a bad deployment, and test how quickly the team can restore accurate guidance. If customers use documentation to configure production systems, stale or broken instructions are an incident surface, not a cosmetic defect.</p>
+            </section>
+
+            <section>
+              <h2>2. Collaborative editing is being designed around source integrity</h2>
+              <p>ReadMe's September 4 update adds real-time multiplayer editing, but the quieter details are more revealing for docs operations. The editor now preserves original Markdown list markers through a save, and applying an inline AI change no longer replaces the whole page when another person has edited it at the same time.</p>
+              <p>Those changes recognize a recurring tension in hybrid workflows: a visual editor may make collaboration easier while producing noisy diffs or overwriting concurrent work in the source repository. A docs platform earns trust when it protects both surfaces—the immediate editing experience and the reviewable history engineers and writers depend on later.</p>
+              <p>For a technical writing team, the useful acceptance test is therefore broader than whether two people can type at once. Check what happens to Markdown after a save, how conflicts are surfaced, whether small AI edits remain small in the diff, and whether reusable content still reports where it is used. Collaboration quality is ultimately measured in recoverable intent.</p>
+            </section>
+
+            <section>
+              <h2>3. API reference architecture is separating content from rendering</h2>
+              <p>Redocly's September 4 preview of Redoc CE 3 shows an API reference moving beyond a single OpenAPI document. The planned engine adapts OpenAPI, AsyncAPI, and GraphQL into a shared structured model, while `x-mcp` entries become first-class pages for tools, resources, and prompts. Search, navigation, schemas, examples, and security information then use the same rendering layer.</p>
+              <p>That separation matters because modern developer products rarely expose only one interface. REST endpoints, event streams, GraphQL operations, and agent tools may describe different interaction styles, but readers still need one coherent way to locate inputs, outputs, authentication, examples, and related concepts. A shared item model can reduce the seams between those formats.</p>
+              <p>The preview also turns structure into performance and linking improvements: large references render only what is near the viewport, and individual operations, tools, resources, schemas, and even response fields get stable routes. For writers, the architectural lesson is clear: when content is modeled before it is rendered, navigation, reuse, search, and deep linking become editorial capabilities rather than theme-level workarounds.</p>
+            </section>
+
+            <section>
+              <h2>Why this week matters</h2>
+              <p>This week's pattern is documentation as production infrastructure. Recovery controls protect readers after a bad release, conflict-aware editing protects author intent during collaboration, and structured renderers protect coherence as the number of interface formats grows.</p>
+              <p>If you own documentation this week, write down a rollback procedure, inspect the diff created by your visual or AI editor, and map which technical interface formats your reference must support over the next year. Those three checks reveal whether the publishing system is ready for the scale the content already has.</p>
+            </section>
+
+            <section>
+              <h2>Sources</h2>
+              <ul class="source-list">
+                <li><a href="https://www.mintlify.com/blog/instant-rollbacks">Mintlify Blog: Announcing Instant Rollbacks (August 31, 2026)</a></li>
+                <li><a href="https://docs.readme.com/main/changelog/themes-multiplayer-editing">ReadMe Changelog: Themes &amp; Multiplayer Editing (September 4, 2026)</a></li>
+                <li><a href="https://redocly.com/blog/redoc-3-whats-new">Redocly Blog: What's coming in Redoc CE 3 (September 4, 2026)</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Article summary">
+            <div class="article-note">
+              <h2>Editor’s note</h2>
+              <p>Review-only draft. Edit the `.docx` before promoting this article into `articles/`.</p>
+            </div>
+
+            <div class="article-note">
+              <h2>What to watch next</h2>
+              <p>Whether docs teams begin treating recovery time, concurrent-edit safety, and protocol coverage as explicit publishing requirements rather than platform conveniences.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="../blog/">Back to the blog</a></p>
+    </footer>
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>
