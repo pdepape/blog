@@ -1,0 +1,18 @@
+Dedupe report for 2026-09-13-documentation-news-roundup
+Generated: 2026-09-13T14:36:02.677Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- journey-based documentation architecture
+- documentation consolidation
+- unanswered-query classification
+- feedback resolution workflow
+- agent interface inspection
+
+This issue does not repeat the September 6 focus on rollback, concurrent editing, or multi-protocol rendering. Its new angle is observability: documentation teams are restructuring content around reader tasks, classifying where AI answers fail, separating feedback conversation from resolution, and inspecting machine-facing interfaces as testable documentation surfaces.
+

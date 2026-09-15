@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A weekly documentation news roundup on journey-based information architecture, unanswered-query analytics, feedback resolution, agent skills, and MCP interface inspection.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Journeys replace silos, unanswered questions become evidence, and agent interfaces get inspectable | TechDocs Studio</title>
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../blog/">Blog</a>
+          <a href="../case-studies/">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero">
+        <p class="eyebrow">Weekly documentation roundup</p>
+        <h1>Journeys replace silos, unanswered questions become evidence, and agent interfaces get inspectable</h1>
+        <p class="article-hero-copy">Week ending September 13, 2026. This draft tracks how documentation teams are turning reader journeys, failed answers, feedback status, and machine-facing interfaces into evidence they can inspect and improve.</p>
+        <p class="article-byline">Prepared September 13, 2026 for editorial review</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>This week's documentation signal is observability. The most useful releases and field reports do not merely promise faster writing. They expose where a reader journey breaks, why an answer fails, whether feedback is actually resolved, and what an agent can discover from a technical interface.</p>
+            <p>For technical writers, that changes improvement work from broad intuition into a sequence of inspectable decisions. Structure can be tested against user journeys, failed queries can be sorted by cause, feedback can remain open until the underlying issue is fixed, and agent-facing descriptions can be examined before they reach users or tools.</p>
+
+            <section>
+              <h2>1. Documentation architecture is being rebuilt around reader journeys</h2>
+              <p>GitBook's September 7 account of rebuilding its own documentation describes a familiar growth problem: developer docs, a changelog, and help content had accumulated in separate repositories with different owners and workflows. The content was not necessarily wrong, but its structure reflected product history more than the paths readers were trying to complete.</p>
+              <p>The team consolidated the sources into one Git repository, then reorganized the site around user journeys instead of product features. That distinction matters. A feature-based tree mirrors the company; a journey-based architecture makes the reader's sequence visible, which helps writers find missing transitions, duplicate explanations, and unclear ownership.</p>
+              <p>AI supported the migration, but the editorial work remained concrete: inventory the corpus, decide which journeys deserve first-class navigation, move pages into a shared operating model, and verify links and redirects. The practical lesson is to use automation for scale while keeping information architecture accountable to tasks a reader can recognize.</p>
+            </section>
+
+            <section>
+              <h2>2. Failed answers are becoming classified editorial evidence</h2>
+              <p>Document360's September 7 release adds analytics for answered and unanswered Eddy AI queries, including trends over time and a reason for each failure. An unanswered question may indicate a content gap, a question outside the documentation's scope, or difficulty interpreting the query. Those categories prevent every failed answer from becoming an indiscriminate request for more content.</p>
+              <p>The same release separates communication from resolution in its feedback manager. A writer can reply to a reader while leaving the feedback open, then close it only when the underlying issue is resolved. That small workflow distinction preserves the difference between acknowledging a report and fixing the documentation problem it revealed.</p>
+              <p>Together, the changes suggest a better editorial queue. Triage failed answers by cause, connect valid gaps to content work, keep reader feedback open through verification, and watch whether the same question recurs after publication. The useful metric is not the volume of AI answers or replies; it is the number of reader problems that move from evidence to a verified change.</p>
+            </section>
+
+            <section>
+              <h2>3. Agent-facing documentation is becoming inspectable before release</h2>
+              <p>Redocly CLI 2.52.0, released September 10, adds installable skills for routine CLI use and for writing lint rules and plugins. It also introduces an experimental command that inspects a running MCP server and records its tools, prompts, resources, and capabilities in an OpenAPI extension. The following day's patch adds a language attribute to generated HTML to address accessibility problems.</p>
+              <p>The common thread is that documentation behavior is moving into artifacts a team can inspect. A skill states how an agent should use a tool. An MCP description records what the service exposes. A generated page carries metadata that browsers and assistive technology depend on. These are not secondary implementation details; they shape whether people and agents can understand and navigate the interface.</p>
+              <p>Technical writers should add these surfaces to release review. Inspect the machine-readable description, compare it with the public reference, test the instructions an agent receives, and include generated HTML in accessibility checks. When documentation serves both humans and software, quality assurance has to cover both rendered pages and the contracts behind them.</p>
+            </section>
+
+            <section>
+              <h2>Why this week matters</h2>
+              <p>This week's pattern is a tighter evidence loop. Reader journeys reveal structural gaps, unanswered-query categories reveal knowledge gaps, unresolved feedback preserves work that still needs proof, and interface inspection reveals what agents can actually see.</p>
+              <p>If you own documentation this week, choose one critical reader journey and trace it end to end. Review the questions your search or assistant could not answer, keep related feedback open until the fix is verified, and inspect at least one machine-facing interface that now represents your content.</p>
+            </section>
+
+            <section>
+              <h2>Sources</h2>
+              <ul class="source-list">
+                <li><a href="https://www.gitbook.com/blog/how-we-rebuilt-gitbooks-docs">GitBook Blog: How we rebuilt GitBook's docs (September 7, 2026)</a></li>
+                <li><a href="https://docs.document360.com/docs/september-2026-12-9-1">Document360 Release Notes: September 2026 12.9.1 (September 7, 2026)</a></li>
+                <li><a href="https://redocly.com/docs/cli/changelog">Redocly CLI Changelog: 2.52.0 and 2.52.1 (September 11, 2026)</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Article summary">
+            <div class="article-note">
+              <h2>Editor’s note</h2>
+              <p>Review-only draft. Edit the `.docx` before promoting this article into `articles/`.</p>
+            </div>
+
+            <div class="article-note">
+              <h2>What to watch next</h2>
+              <p>Whether documentation teams connect these signals into one operating loop: journey ownership, unanswered-query triage, feedback resolution, and automated checks for agent-facing interfaces.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="../blog/">Back to the blog</a></p>
+    </footer>
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>
