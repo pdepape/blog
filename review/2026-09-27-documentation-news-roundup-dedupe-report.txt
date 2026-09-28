@@ -1,0 +1,18 @@
+Dedupe report for 2026-09-27-documentation-news-roundup
+Generated: 2026-09-27T21:37:12.046Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- documentation narration
+- WebMCP documentation tools
+- article archiving
+- expiring private links
+- documentation branch rebasing
+
+This issue does not repeat the September 20 focus on Git-backed changelogs, visual approval, changed-page summaries, cited AI answers, or MCP performance metrics. Its new angle is lifecycle coherence across delivery surfaces: deciding what a page exposes to listeners and browser agents, retiring it without destroying history, limiting draft access, and reconciling parallel edits before publication.
+
