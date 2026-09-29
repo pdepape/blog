@@ -87,6 +87,9 @@ for (const filePath of publicHtmlFiles) {
   if (/yourdomain\.com/.test(html)) {
     errors.push(`${relative(filePath)}: contains a placeholder domain`);
   }
+  if (!/data-cf-beacon='\{"token":"4bb54837049944c8b36c239a22cddb09"\}'/.test(html)) {
+    errors.push(`${relative(filePath)}: missing Cloudflare Web Analytics beacon`);
+  }
 }
 
 for (const filePath of htmlFiles.filter((candidate) => relative(candidate).startsWith("review/"))) {

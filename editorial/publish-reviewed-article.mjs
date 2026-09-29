@@ -5,6 +5,9 @@ import path from "node:path";
 import process from "node:process";
 
 const repoRoot = process.cwd();
+const cloudflareAnalyticsSnippet = `    <!-- Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"4bb54837049944c8b36c239a22cddb09"}'></script>
+    <!-- End Cloudflare Web Analytics -->`;
 
 function escapeHtml(value) {
   return value
@@ -112,10 +115,20 @@ function addPublishedMetadata(html, issue, slug) {
     throw new Error(`Could not find the expected title tag for ${slug}`);
   }
 
-  return html
+  const publishedHtml = html
     .replace(/^\s*<meta name="robots" content="noindex, nofollow">\s*$/m, "")
     .replace(titleTag, socialMetadata)
     .replace("This draft tracks", "This roundup tracks");
+
+  if (publishedHtml.includes("data-cf-beacon")) {
+    return publishedHtml;
+  }
+
+  if (!publishedHtml.includes("  </body>")) {
+    throw new Error(`Could not find the closing body tag for ${slug}`);
+  }
+
+  return publishedHtml.replace("  </body>", `${cloudflareAnalyticsSnippet}\n  </body>`);
 }
 
 async function main() {
