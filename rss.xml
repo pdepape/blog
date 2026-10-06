@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TechDocs Studio</title>
+    <link>https://techdocstudio.com/</link>
+    <description>Practical technical documentation guides, case studies, and weekly reporting.</description>
+    <language>en-ca</language>
+    <lastBuildDate>Tue, 06 Oct 2026 12:00:00 -0400</lastBuildDate>
+    <atom:link href="https://techdocstudio.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item><title>How to audit technical documentation: a five-signal checklist</title><link>https://techdocstudio.com/guides/technical-documentation-audit.html</link><guid>https://techdocstudio.com/guides/technical-documentation-audit.html</guid><pubDate>Tue, 06 Oct 2026 12:00:00 -0400</pubDate><description>A practical audit for ownership, discovery, accuracy, launch alignment, and feedback.</description></item>
+    <item><title>How to measure documentation quality</title><link>https://techdocstudio.com/guides/documentation-quality-metrics.html</link><guid>https://techdocstudio.com/guides/documentation-quality-metrics.html</guid><pubDate>Tue, 06 Oct 2026 11:00:00 -0400</pubDate><description>A balanced scorecard for measuring findability, task success, accuracy, maintenance, and outcomes.</description></item>
+    <item><title>Documentation review workflow: a practical guide</title><link>https://techdocstudio.com/guides/documentation-review-workflow.html</link><guid>https://techdocstudio.com/guides/documentation-review-workflow.html</guid><pubDate>Tue, 06 Oct 2026 10:00:00 -0400</pubDate><description>A repeatable workflow for technical verification, editorial review, approval, and maintenance.</description></item>
+    <item><title>Evidence is moving closer to every content decision</title><link>https://techdocstudio.com/articles/2026-10-04-documentation-news-roundup.html</link><guid>https://techdocstudio.com/articles/2026-10-04-documentation-news-roundup.html</guid><pubDate>Sun, 04 Oct 2026 12:00:00 -0400</pubDate><description>Why documentation teams need evidence and traceability built into analytics, assets, API transformations, and review.</description></item>
+    <item><title>One source now has to serve audio, agents, and controlled change</title><link>https://techdocstudio.com/articles/2026-09-27-documentation-news-roundup.html</link><guid>https://techdocstudio.com/articles/2026-09-27-documentation-news-roundup.html</guid><pubDate>Sun, 27 Sep 2026 12:00:00 -0400</pubDate><description>Why documentation teams need one governed source that works for listeners, browser agents, private reviewers, and parallel editors.</description></item>
+  </channel>
+</rss>

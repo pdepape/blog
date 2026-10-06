@@ -109,16 +109,34 @@ function addPublishedMetadata(html, issue, slug) {
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeHtml(issue.pageTitle)}">
     <meta name="twitter:description" content="${escapeHtml(issue.metaDescription)}">
-    <meta name="twitter:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">`;
+    <meta name="twitter:image" content="https://techdocstudio.com/assets/techdocs-studio-og.png">
+    <link rel="alternate" type="application/rss+xml" title="TechDocs Studio" href="https://techdocstudio.com/rss.xml">`;
 
   if (!html.includes(titleTag)) {
     throw new Error(`Could not find the expected title tag for ${slug}`);
   }
 
-  const publishedHtml = html
+  let publishedHtml = html
     .replace(/^\s*<meta name="robots" content="noindex, nofollow">\s*$/m, "")
     .replace(titleTag, socialMetadata)
     .replace("This draft tracks", "This roundup tracks");
+
+  if (!publishedHtml.includes("Related evergreen guides")) {
+    publishedHtml = publishedHtml.replace(
+      "            <section>\n              <h2>Sources</h2>",
+      `            <section>
+              <h2>Related evergreen guides</h2>
+              <ul>
+                <li><a href="../guides/technical-documentation-audit.html">How to audit technical documentation</a></li>
+                <li><a href="../guides/documentation-quality-metrics.html">How to measure documentation quality</a></li>
+                <li><a href="../guides/documentation-review-workflow.html">Documentation review workflow</a></li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Sources</h2>`
+    );
+  }
 
   if (publishedHtml.includes("data-cf-beacon")) {
     return publishedHtml;
