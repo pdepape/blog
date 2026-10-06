@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A weekly documentation news roundup on conversational analytics, stable asset references, API overlays, and clearer pull-request review.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Evidence is moving closer to every content decision | TechDocs Studio</title>
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../blog/">Blog</a>
+          <a href="../case-studies/">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero">
+        <p class="eyebrow">Weekly documentation roundup</p>
+        <h1>Evidence is moving closer to every content decision</h1>
+        <p class="article-hero-copy">Week ending October 4, 2026. This draft examines how documentation teams can connect usage evidence, reusable assets, API transformations, and review decisions without losing traceability.</p>
+        <p class="article-byline">Prepared October 4, 2026 for editorial review</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>This week's documentation signal is evidence getting closer to the work. Teams can ask an agent what readers and agents are doing, rename a shared asset without breaking every use, apply a documented transformation without rewriting an API description, and inspect a clearer code diff before approving a change.</p>
+            <p>For technical writers, proximity is useful only when it preserves traceability. A fast answer still needs a defined metric. A reusable image still needs a stable identity. A transformed API reference still needs an inspectable relationship to its source. A polished diff still needs enough context for an editor to judge meaning, not just syntax.</p>
+
+            <section>
+              <h2>1. Conversational analytics can shorten the path from signal to investigation</h2>
+              <p>Mintlify introduced an analytics agent on September 29 that answers natural-language questions about documentation performance inside the editor. Its examples include comparing human and agent traffic, finding pages with the most growth, and identifying content that receives strong traffic but low engagement. The agent can also produce tables or charts and explain what stands out.</p>
+              <p>That workflow lowers the cost of asking a useful follow-up question. A writer no longer has to begin with a dashboard filter sequence or export before testing a hypothesis. But conversational access does not remove the need to define the population, time window, comparison, and meaning of measures such as engagement.</p>
+              <p>Treat each analytics answer as the start of an editorial investigation. Record the question, date range, audience segment, and metric definition; inspect the underlying pages; then connect any proposed change to a specific reader task. This turns a convenient observation into evidence that another reviewer can reproduce and challenge.</p>
+            </section>
+
+            <section>
+              <h2>2. Stable references make shared assets safer to govern</h2>
+              <p>Document360's September 28 release lets teams rename files in Drive without breaking their uses in articles, reusable content blocks, or decision trees. It also lets Eddy AI propose descriptive image names from project naming rules, and allows AI-capture authors to insert or replace images from Drive in step guides, videos, and interactive demos.</p>
+              <p>The important design choice is separating an asset's identity from its visible filename. Writers can improve a name or replace a visual while the system preserves the references that connect it to published content. That reduces the incentive to tolerate vague filenames merely because changing them feels risky.</p>
+              <p>Use that stability to tighten asset governance. Adopt names that describe purpose rather than upload history, add ownership and review dates where the platform permits, and check every reuse before replacing a screenshot. A non-breaking reference protects delivery; it does not prove that the new visual remains accurate in every context.</p>
+            </section>
+
+            <section>
+              <h2>3. Explicit transformations and clearer diffs strengthen review</h2>
+              <p>Redocly CLI 2.56.0 added support for applying Overlay documents to bundled API descriptions and for linting Overlay 1.1 and 1.2. Overlays let a team keep changes such as descriptions, examples, or audience-specific adjustments separate from the base API contract, then apply them predictably during the documentation build.</p>
+              <p>Redocly also improved its Reunite pull-request diff on October 1 with syntax highlighting, expandable hidden lines, and a refreshed interface. On October 3 it corrected reversed review-comment order. Together, these changes address both sides of controlled transformation: declare what changes the source, then give reviewers a legible view of the result and the conversation around it.</p>
+              <p>Technical writers should review overlays as maintained editorial logic, not as invisible build plumbing. Give each overlay a named purpose, lint it in CI, show reviewers the rendered effect alongside the source diff, and keep comment chronology intact when decisions depend on earlier context. The goal is a transformation that can be explained from base contract to published reference.</p>
+            </section>
+
+            <section>
+              <h2>Why this week matters</h2>
+              <p>This week's releases point toward a more inspectable documentation operation. Analytics can surface the reason to act; stable object references can preserve the content being changed; overlays can declare how a source is adapted; and stronger review interfaces can show what the adaptation does.</p>
+              <p>If you own documentation this week, trace one proposed improvement end to end. Capture the usage signal, identify the exact source and shared assets, list every transformation applied during the build, and verify that a reviewer can reconstruct the decision from the diff and discussion. Any missing link is a governance problem worth fixing before the next change ships.</p>
+            </section>
+
+            <section>
+              <h2>Sources</h2>
+              <ul class="source-list">
+                <li><a href="https://www.mintlify.com/blog/analytics-agent">Mintlify: Explore your analytics with the Mintlify agent (September 29, 2026)</a></li>
+                <li><a href="https://docs.document360.com/docs/september-2026-12-9-3">Document360 Release Notes: September 2026 12.9.3 (September 28, 2026)</a></li>
+                <li><a href="https://github.com/Redocly/redocly-cli/releases/tag/%40redocly%2Fcli%402.56.0">Redocly CLI changelog: 2.56.0 (September 30, 2026)</a></li>
+                <li><a href="https://redocly.com/docs/realm/changelog#reunite-v2026-10-03-1">Redocly Reunite changelog: October 2026 review improvements (October 3, 2026)</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Article summary">
+            <div class="article-note">
+              <h2>Editor’s note</h2>
+              <p>Review-only draft. Edit the `.docx` before promoting this article into `articles/`.</p>
+            </div>
+
+            <div class="article-note">
+              <h2>What to watch next</h2>
+              <p>Whether documentation platforms preserve a visible chain from reader or agent behaviour to the exact source, asset, transformation, review comment, and published change that follows.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="../blog/">Back to the blog</a></p>
+    </footer>
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>

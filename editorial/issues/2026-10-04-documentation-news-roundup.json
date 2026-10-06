@@ -1,0 +1,77 @@
+{
+  "slug": "2026-10-04-documentation-news-roundup",
+  "banner": "TECHDOCS STUDIO REVIEW DRAFT",
+  "dateDisplay": "October 4, 2026",
+  "reviewTitle": "Documentation news roundup: evidence is moving closer to every content decision",
+  "pageTitle": "Evidence is moving closer to every content decision",
+  "metaDescription": "A weekly documentation news roundup on conversational analytics, stable asset references, API overlays, and clearer pull-request review.",
+  "heroCopy": "Week ending October 4, 2026. This draft examines how documentation teams can connect usage evidence, reusable assets, API transformations, and review decisions without losing traceability.",
+  "editorNote": "Review-only draft. Edit the `.docx` before promoting this article into `articles/`.",
+  "publishedEditorNote": "This post is part of the weekly TechDocs Studio roundup tracking documentation operations, tooling, and editorial strategy shifts that matter to technical writers.",
+  "watchNext": "Whether documentation platforms preserve a visible chain from reader or agent behaviour to the exact source, asset, transformation, review comment, and published change that follows.",
+  "indexCardDescription": "Why documentation teams need evidence and traceability built into analytics, assets, API transformations, and review.",
+  "indexCategory": "editorial operations",
+  "focusTerms": [
+    "documentation analytics agent",
+    "stable asset references",
+    "OpenAPI overlays",
+    "documentation pull request review"
+  ],
+  "noveltyNote": "This issue does not repeat the September 27 focus on narrated pages, browser-agent tools, archived content, expiring private links, or branch conflict resolution. Its new angle is evidence continuity: keeping the signal behind a documentation decision connected to the stable source objects, explicit transformations, and review context used to implement that decision.",
+  "intro": [
+    "This week's documentation signal is evidence getting closer to the work. Teams can ask an agent what readers and agents are doing, rename a shared asset without breaking every use, apply a documented transformation without rewriting an API description, and inspect a clearer code diff before approving a change.",
+    "For technical writers, proximity is useful only when it preserves traceability. A fast answer still needs a defined metric. A reusable image still needs a stable identity. A transformed API reference still needs an inspectable relationship to its source. A polished diff still needs enough context for an editor to judge meaning, not just syntax."
+  ],
+  "sections": [
+    {
+      "heading": "Conversational analytics can shorten the path from signal to investigation",
+      "paragraphs": [
+        "Mintlify introduced an analytics agent on September 29 that answers natural-language questions about documentation performance inside the editor. Its examples include comparing human and agent traffic, finding pages with the most growth, and identifying content that receives strong traffic but low engagement. The agent can also produce tables or charts and explain what stands out.",
+        "That workflow lowers the cost of asking a useful follow-up question. A writer no longer has to begin with a dashboard filter sequence or export before testing a hypothesis. But conversational access does not remove the need to define the population, time window, comparison, and meaning of measures such as engagement.",
+        "Treat each analytics answer as the start of an editorial investigation. Record the question, date range, audience segment, and metric definition; inspect the underlying pages; then connect any proposed change to a specific reader task. This turns a convenient observation into evidence that another reviewer can reproduce and challenge."
+      ]
+    },
+    {
+      "heading": "Stable references make shared assets safer to govern",
+      "paragraphs": [
+        "Document360's September 28 release lets teams rename files in Drive without breaking their uses in articles, reusable content blocks, or decision trees. It also lets Eddy AI propose descriptive image names from project naming rules, and allows AI-capture authors to insert or replace images from Drive in step guides, videos, and interactive demos.",
+        "The important design choice is separating an asset's identity from its visible filename. Writers can improve a name or replace a visual while the system preserves the references that connect it to published content. That reduces the incentive to tolerate vague filenames merely because changing them feels risky.",
+        "Use that stability to tighten asset governance. Adopt names that describe purpose rather than upload history, add ownership and review dates where the platform permits, and check every reuse before replacing a screenshot. A non-breaking reference protects delivery; it does not prove that the new visual remains accurate in every context."
+      ]
+    },
+    {
+      "heading": "Explicit transformations and clearer diffs strengthen review",
+      "paragraphs": [
+        "Redocly CLI 2.56.0 added support for applying Overlay documents to bundled API descriptions and for linting Overlay 1.1 and 1.2. Overlays let a team keep changes such as descriptions, examples, or audience-specific adjustments separate from the base API contract, then apply them predictably during the documentation build.",
+        "Redocly also improved its Reunite pull-request diff on October 1 with syntax highlighting, expandable hidden lines, and a refreshed interface. On October 3 it corrected reversed review-comment order. Together, these changes address both sides of controlled transformation: declare what changes the source, then give reviewers a legible view of the result and the conversation around it.",
+        "Technical writers should review overlays as maintained editorial logic, not as invisible build plumbing. Give each overlay a named purpose, lint it in CI, show reviewers the rendered effect alongside the source diff, and keep comment chronology intact when decisions depend on earlier context. The goal is a transformation that can be explained from base contract to published reference."
+      ]
+    }
+  ],
+  "whyThisWeekMatters": [
+    "This week's releases point toward a more inspectable documentation operation. Analytics can surface the reason to act; stable object references can preserve the content being changed; overlays can declare how a source is adapted; and stronger review interfaces can show what the adaptation does.",
+    "If you own documentation this week, trace one proposed improvement end to end. Capture the usage signal, identify the exact source and shared assets, list every transformation applied during the build, and verify that a reviewer can reconstruct the decision from the diff and discussion. Any missing link is a governance problem worth fixing before the next change ships."
+  ],
+  "sources": [
+    {
+      "label": "Mintlify: Explore your analytics with the Mintlify agent",
+      "date": "September 29, 2026",
+      "url": "https://www.mintlify.com/blog/analytics-agent"
+    },
+    {
+      "label": "Document360 Release Notes: September 2026 12.9.3",
+      "date": "September 28, 2026",
+      "url": "https://docs.document360.com/docs/september-2026-12-9-3"
+    },
+    {
+      "label": "Redocly CLI changelog: 2.56.0",
+      "date": "September 30, 2026",
+      "url": "https://github.com/Redocly/redocly-cli/releases/tag/%40redocly%2Fcli%402.56.0"
+    },
+    {
+      "label": "Redocly Reunite changelog: October 2026 review improvements",
+      "date": "October 3, 2026",
+      "url": "https://redocly.com/docs/realm/changelog#reunite-v2026-10-03-1"
+    }
+  ]
+}

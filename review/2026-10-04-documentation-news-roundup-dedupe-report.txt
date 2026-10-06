@@ -1,0 +1,16 @@
+Dedupe report for 2026-10-04-documentation-news-roundup
+Generated: 2026-10-05T00:09:35.241Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- documentation analytics agent
+- stable asset references
+- OpenAPI overlays
+- documentation pull request review
+
+This issue does not repeat the September 27 focus on narrated pages, browser-agent tools, archived content, expiring private links, or branch conflict resolution. Its new angle is evidence continuity: keeping the signal behind a documentation decision connected to the stable source objects, explicit transformations, and review context used to implement that decision.
