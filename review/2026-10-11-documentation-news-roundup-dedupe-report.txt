@@ -1,0 +1,16 @@
+Dedupe report for 2026-10-11-documentation-news-roundup
+Generated: 2026-10-11T13:02:48.751Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- continuous documentation quality monitoring
+- durable version language
+- documentation prose linting
+- API description file conflict detection
+
+This issue does not repeat the October 4 focus on analytics conversations, stable asset references, OpenAPI overlays, or pull-request diff presentation. Its new angle is executable quality: expressing editorial expectations as continuous checks while preserving the contextual judgment needed to interpret and fix findings.

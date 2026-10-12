@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A weekly documentation news roundup on continuous quality monitoring, durable version language, prose linting, and safer API file operations.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Quality rules are becoming part of the delivery system | TechDocs Studio</title>
+    <link rel="stylesheet" href="../styles.css?v=20260722">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-menu>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../index.html#top" aria-label="TechDocs Studio home">
+          <span class="brand-mark" aria-hidden="true">TD</span>
+          <span>TechDocs Studio</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="nav-links" id="site-menu">
+          <a class="nav-blog" href="../blog/">Blog</a>
+          <a href="../case-studies/">Case studies</a>
+          <a href="../index.html#coverage">Coverage</a>
+          <a href="../index.html#audit">Audit</a>
+          <a class="nav-cta" href="mailto:hello@techdocstudio.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="article-page">
+      <section class="article-hero">
+        <p class="eyebrow">Weekly documentation roundup</p>
+        <h1>Quality rules are becoming part of the delivery system</h1>
+        <p class="article-hero-copy">Week ending October 11, 2026. This draft looks at how documentation teams can turn editorial standards into observable checks that survive product changes and publishing pipelines.</p>
+        <p class="article-byline">Prepared October 11, 2026 for editorial review</p>
+      </section>
+
+      <article class="article-shell">
+        <div class="article-layout">
+          <div class="article-main">
+            <p>This week's documentation signal is that quality guidance is moving into the delivery system. Platforms are monitoring content gaps, broken links, and style rules; community guidance is making version language more durable; and API tooling is checking prose and protecting content when file operations collide.</p>
+            <p>For technical writers, automation is valuable when it makes an expectation visible and actionable. A quality check should identify the exact source, explain the rule, and leave room for a documented exception. Otherwise, teams replace an informal standard with a queue of warnings that nobody trusts.</p>
+
+            <section>
+              <h2>1. Continuous monitoring turns quality work into a maintained backlog</h2>
+              <p>GitBook introduced a quality monitoring layer on October 6 that brings content gaps, broken links, style-guide checks, and updated analytics into one maintenance workflow. The product direction is notable because it treats quality problems as conditions to observe continuously, not as defects found only during a periodic audit or after a support ticket.</p>
+              <p>The useful unit is a finding that a writer can investigate. A content-gap report should retain the question that exposed the gap. A broken-link check should identify the source page and target. A style finding should name the specific rule and the text that triggered it. Without that context, monitoring creates volume rather than clarity.</p>
+              <p>Use continuous checks to feed a governed backlog. Assign an owner, severity, and review date; group recurring findings by root cause; and close the loop by recording whether the fix changed reader behaviour. Quality monitoring becomes operationally useful when it connects detection, editorial judgment, correction, and verification.</p>
+            </section>
+
+            <section>
+              <h2>2. Durable version language is a quality rule worth encoding</h2>
+              <p>The October Write the Docs newsletter highlighted a familiar maintenance failure: phrases such as “new,” “now,” and “previous” lose meaning as releases age. Contributors recommended naming the change with a version, release label, platform label, or compatibility statement, supported by a last-updated or last-verified date.</p>
+              <p>This is more than a wording preference. Relative time language hides the applicability boundary that readers and retrieval systems need. A sentence can remain grammatically correct for years while becoming operationally ambiguous because nobody can tell which release it describes.</p>
+              <p>Add this rule to review checklists and prose linting, but do not ban every relative term blindly. Release notes can legitimately describe what is new within a dated release. The check should prompt the writer to supply a durable reference or confirm that the surrounding page already provides one.</p>
+            </section>
+
+            <section>
+              <h2>3. Prose and file structure can be validated in the same pipeline</h2>
+              <p>Redocly CLI 2.59.0, released October 6, extended its recheck command to lint description fields in API descriptions and report the source line and column. Teams can tune rules specifically for descriptions and suppress a finding by file, rule, and pointer. This puts editorial prose inside the same source-aware feedback loop as structural API validation.</p>
+              <p>A day later, Redocly CLI 2.60.0 added configurable severity for filename conflicts in the split command and fixed a case where content could be lost when multiple API objects produced the same filename. Later files now receive numbered suffixes instead of silently colliding. Together, the changes show that documentation quality includes both the words readers see and the integrity of the build operations that carry those words.</p>
+              <p>Treat prose rules and structural safeguards as one quality gate with different consequences. A style deviation may deserve a warning and an explicit exception; possible content loss should stop the build. Keep machine-readable results, preserve precise source locations, and review rule changes as carefully as content changes so the pipeline remains credible to writers.</p>
+            </section>
+
+            <section>
+              <h2>Why this week matters</h2>
+              <p>This week's releases and community guidance point toward documentation quality as an observable system. Teams can detect gaps and broken links continuously, encode durable language rules, lint prose where it lives inside an API contract, and prevent file operations from discarding content.</p>
+              <p>If you own documentation this week, choose one rule your team applies inconsistently and make its path explicit. Define what triggers it, what evidence the finding must include, who decides whether to fix or except it, and how you will verify the outcome. Automate the detection only after the human decision is clear.</p>
+            </section>
+
+            <section>
+              <h2>Sources</h2>
+              <ul class="source-list">
+                <li><a href="https://www.gitbook.com/blog/new-quality-monitoring-layer">GitBook: Introducing GitBook’s quality monitoring layer for reliable docs (October 6, 2026)</a></li>
+                <li><a href="https://www.writethedocs.org/blog/newsletter-october-2026/">Write the Docs Newsletter: October 2026 (October 2026)</a></li>
+                <li><a href="https://redocly.com/docs/cli/changelog#2600-2026-10-07">Redocly CLI changelog: 2.59.0 and 2.60.0 (October 6–7, 2026)</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <aside class="article-sidebar" aria-label="Article summary">
+            <div class="article-note">
+              <h2>Editor’s note</h2>
+              <p>Review-only draft. Edit the `.docx` or Google Docs copy before promoting this article into `articles/`.</p>
+            </div>
+
+            <div class="article-note">
+              <h2>What to watch next</h2>
+              <p>Whether quality systems explain why a rule fired, preserve the source context a writer needs to fix it, and distinguish a useful exception from accumulating editorial debt.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 TechDocs Studio &middot; <a href="mailto:hello@techdocstudio.com">hello@techdocstudio.com</a></p>
+      <p><a href="../blog/">Back to the blog</a></p>
+    </footer>
+    <script src="../script.js?v=20260722"></script>
+  </body>
+</html>
