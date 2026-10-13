@@ -17,6 +17,10 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+function escapeXml(value) {
+  return escapeHtml(value).replaceAll("'", "&apos;");
+}
+
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, "utf8"));
 }
@@ -92,7 +96,41 @@ function upsertSitemapEntry(xml, slug) {
     <lastmod>${publishedDate}</lastmod>
   </url>`;
 
-  return withoutExistingEntry.replace(startMarker, `${startMarker}\n${entry}`);
+  return withoutExistingEntry
+    .replace(startMarker, `${startMarker}\n${entry}`)
+    .replace(
+      /(<loc>https:\/\/techdocstudio\.com\/(?:blog\/)?<\/loc>\s*<lastmod>)[^<]+(<\/lastmod>)/g,
+      `$1${publishedDate}$2`
+    );
+}
+
+function upsertRssItem(xml, issue, slug) {
+  const publishedDate = slug.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!publishedDate) {
+    throw new Error(`Could not derive an RSS publication date from ${slug}`);
+  }
+
+  const [, year, month, day] = publishedDate;
+  const date = new Date(`${year}-${month}-${day}T12:00:00-04:00`);
+  const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][date.getUTCDay()];
+  const monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][Number(month) - 1];
+  const rssDate = `${weekday}, ${day} ${monthName} ${year} 12:00:00 -0400`;
+  const articleUrl = `https://techdocstudio.com/articles/${slug}.html`;
+  const itemPattern = new RegExp(
+    `<item><title>[\\s\\S]*?<link>${escapeRegExp(articleUrl)}<\\/link>[\\s\\S]*?<\\/item>\\s*`,
+    "g"
+  );
+  const withoutExistingItem = xml.replace(itemPattern, "");
+  const selfLink = '    <atom:link href="https://techdocstudio.com/rss.xml" rel="self" type="application/rss+xml" />';
+  if (!withoutExistingItem.includes(selfLink)) {
+    throw new Error("Could not find the RSS self link");
+  }
+
+  const item = `    <item><title>${escapeXml(issue.pageTitle)}</title><link>${articleUrl}</link><guid>${articleUrl}</guid><pubDate>${rssDate}</pubDate><description>${escapeXml(issue.indexCardDescription ?? issue.metaDescription)}</description></item>`;
+
+  return withoutExistingItem
+    .replace(/<lastBuildDate>[^<]+<\/lastBuildDate>/, `<lastBuildDate>${rssDate}</lastBuildDate>`)
+    .replace(selfLink, `${selfLink}\n${item}`);
 }
 
 function addPublishedMetadata(html, issue, slug) {
@@ -162,12 +200,14 @@ async function main() {
   const indexPath = path.join(repoRoot, "index.html");
   const blogIndexPath = path.join(repoRoot, "blog", "index.html");
   const sitemapPath = path.join(repoRoot, "sitemap.xml");
+  const rssPath = path.join(repoRoot, "rss.xml");
 
   const issue = await readJson(issuePath);
   const reviewHtml = await fs.readFile(reviewPath, "utf8");
   const indexHtml = await fs.readFile(indexPath, "utf8");
   const blogIndexHtml = await fs.readFile(blogIndexPath, "utf8");
   const sitemapXml = await fs.readFile(sitemapPath, "utf8");
+  const rssXml = await fs.readFile(rssPath, "utf8");
 
   const articleHtml = addPublishedMetadata(
     reviewHtml
@@ -216,11 +256,13 @@ async function main() {
   );
   const updatedBlogIndexHtml = upsertBlogCard(blogIndexHtml, slug, blogCard);
   const updatedSitemapXml = upsertSitemapEntry(sitemapXml, slug);
+  const updatedRssXml = upsertRssItem(rssXml, issue, slug);
 
   await fs.writeFile(articlePath, articleHtml, "utf8");
   await fs.writeFile(indexPath, updatedIndexHtml, "utf8");
   await fs.writeFile(blogIndexPath, updatedBlogIndexHtml, "utf8");
   await fs.writeFile(sitemapPath, updatedSitemapXml, "utf8");
+  await fs.writeFile(rssPath, updatedRssXml, "utf8");
 
   process.stdout.write(
     JSON.stringify(
@@ -229,6 +271,7 @@ async function main() {
         indexPath,
         blogIndexPath,
         sitemapPath,
+        rssPath,
       },
       null,
       2

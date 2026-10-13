@@ -121,6 +121,7 @@ if ((blogHtml.match(/class="article-card article-card-featured"/g) ?? []).length
 }
 
 const sitemapXml = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+const rssXml = fs.readFileSync(path.join(root, "rss.xml"), "utf8");
 for (const marker of ["published-articles:start", "published-articles:end"]) {
   if ((sitemapXml.match(new RegExp(marker, "g")) ?? []).length !== 1) {
     errors.push(`sitemap.xml: expected one ${marker} publishing marker`);
@@ -130,6 +131,16 @@ for (const articlePath of htmlFiles.filter((candidate) => relative(candidate).st
   const articleUrl = `https://techdocstudio.com/${relative(articlePath)}`;
   if (!sitemapXml.includes(`<loc>${articleUrl}</loc>`)) {
     errors.push(`sitemap.xml: missing ${articleUrl}`);
+  }
+}
+
+const newestArticlePath = htmlFiles
+  .filter((candidate) => relative(candidate).startsWith("articles/"))
+  .sort((left, right) => relative(right).localeCompare(relative(left)))[0];
+if (newestArticlePath) {
+  const newestArticleUrl = `https://techdocstudio.com/${relative(newestArticlePath)}`;
+  if (!rssXml.includes(`<link>${newestArticleUrl}</link>`)) {
+    errors.push(`rss.xml: missing newest article ${newestArticleUrl}`);
   }
 }
 
