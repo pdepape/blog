@@ -5,8 +5,9 @@
     <link>https://techdocstudio.com/</link>
     <description>Practical technical documentation guides, case studies, and weekly reporting.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 11 Oct 2026 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 12:00:00 -0400</lastBuildDate>
     <atom:link href="https://techdocstudio.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item><title>Agent governance is becoming editorial infrastructure</title><link>https://techdocstudio.com/articles/2026-10-25-documentation-news-roundup.html</link><guid>https://techdocstudio.com/articles/2026-10-25-documentation-news-roundup.html</guid><pubDate>Sun, 25 Oct 2026 12:00:00 -0400</pubDate><description>Why agent permissions, reusable instructions, and audience controls now belong in the editorial system.</description></item>
     <item><title>Quality rules are becoming part of the delivery system</title><link>https://techdocstudio.com/articles/2026-10-11-documentation-news-roundup.html</link><guid>https://techdocstudio.com/articles/2026-10-11-documentation-news-roundup.html</guid><pubDate>Sun, 11 Oct 2026 12:00:00 -0400</pubDate><description>Why documentation teams should encode quality rules without losing editorial judgment or source context.</description></item>
     <item><title>How to audit technical documentation: a five-signal checklist</title><link>https://techdocstudio.com/guides/technical-documentation-audit.html</link><guid>https://techdocstudio.com/guides/technical-documentation-audit.html</guid><pubDate>Tue, 06 Oct 2026 12:00:00 -0400</pubDate><description>A practical audit for ownership, discovery, accuracy, launch alignment, and feedback.</description></item>
     <item><title>How to measure documentation quality</title><link>https://techdocstudio.com/guides/documentation-quality-metrics.html</link><guid>https://techdocstudio.com/guides/documentation-quality-metrics.html</guid><pubDate>Tue, 06 Oct 2026 11:00:00 -0400</pubDate><description>A balanced scorecard for measuring findability, task success, accuracy, maintenance, and outcomes.</description></item>

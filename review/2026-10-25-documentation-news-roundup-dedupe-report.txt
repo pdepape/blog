@@ -1,0 +1,16 @@
+Dedupe report for 2026-10-25-documentation-news-roundup
+Generated: 2026-10-25T15:23:54.395Z
+
+Source URL overlap
+- none
+
+Similar prior titles
+- none above threshold
+
+Current focus terms
+- always-on documentation agents
+- reusable editorial skills
+- agent review permissions
+- human and agent content targeting
+
+This issue does not repeat the October 18 focus on source traceability, cited answers, Git-synced changelogs, or runtime telemetry. Its new angle is governance: deciding when an agent may act, which reusable editorial rules constrain its work, where a person must approve a change, and how published content can differ for human and agent audiences.

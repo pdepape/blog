@@ -1,0 +1,82 @@
+{
+  "slug": "2026-10-25-documentation-news-roundup",
+  "banner": "TECHDOCS STUDIO REVIEW DRAFT",
+  "dateDisplay": "October 25, 2026",
+  "reviewTitle": "Documentation news roundup: agent governance is becoming editorial infrastructure",
+  "pageTitle": "Agent governance is becoming editorial infrastructure",
+  "metaDescription": "A weekly documentation news roundup on always-on documentation agents, reusable writing skills, review boundaries, and human-versus-agent content delivery.",
+  "heroCopy": "Week ending October 25, 2026. This draft examines how documentation platforms are turning agent permissions, review rules, reusable instructions, and audience targeting into editorial infrastructure.",
+  "editorNote": "Review-only draft. Edit the `.docx` or Google Docs copy before promoting this article into `articles/`.",
+  "publishedEditorNote": "This post is part of the weekly TechDocs Studio roundup tracking documentation operations, tooling, and editorial strategy shifts that matter to technical writers.",
+  "watchNext": "Whether documentation teams can inspect why an agent proposed a change, identify which rules shaped it, and measure when automation saves review time versus merely moving work to reviewers.",
+  "indexCardDescription": "Why agent permissions, reusable instructions, and audience controls now belong in the editorial system.",
+  "indexCategory": "agent governance",
+  "focusTerms": [
+    "always-on documentation agents",
+    "reusable editorial skills",
+    "agent review permissions",
+    "human and agent content targeting"
+  ],
+  "noveltyNote": "This issue does not repeat the October 18 focus on source traceability, cited answers, Git-synced changelogs, or runtime telemetry. Its new angle is governance: deciding when an agent may act, which reusable editorial rules constrain its work, where a person must approve a change, and how published content can differ for human and agent audiences.",
+  "intro": [
+    "This week's documentation signal is that agent governance is moving into the editorial system. New releases can watch product signals for missing documentation, reuse a team's writing rules, propose or apply changes through different review paths, and target published content separately to people and AI agents.",
+    "For technical writers, the important shift is not simply that agents can produce more text. It is that documentation platforms now need durable answers to editorial questions: what triggers a change, which instructions govern it, who must approve it, and which audience should receive the result. Those controls determine whether faster drafting improves the documentation or only creates a faster review queue."
+  ],
+  "sections": [
+    {
+      "heading": "Always-on agents make trigger policy an editorial decision",
+      "paragraphs": [
+        "Mintlify introduced Autopilot in beta on October 20. The agent watches connected repositories and systems such as Slack, project trackers, support tickets, and feature flags, then drafts documentation updates and opens pull requests when it identifies a change or recurring gap. It tags reviewers and sends email, but it does not publish until a person merges the pull request.",
+        "This turns trigger selection into part of documentation strategy. A code merge, repeated support question, and reported mismatch are different kinds of evidence, with different urgency and confidence. Treating them as equivalent can flood reviewers with low-value proposals or encourage speculative documentation before the product behaviour is settled.",
+        "Define a trigger policy before enabling continuous drafting. For each signal, name the expected evidence, the allowed page types, the reviewer, and the conditions that should suppress an update. Track proposals that are merged, heavily rewritten, closed, or ignored. Those outcomes reveal whether the agent is finding meaningful gaps or merely transferring discovery work to the review stage."
+      ]
+    },
+    {
+      "heading": "Reusable skills turn repeated feedback into governed instructions",
+      "paragraphs": [
+        "On October 23, Mintlify added custom skills to its web-editor agent. Teams can upload a skill built around a `SKILL.md` file, references, and examples, then apply it personally or across an organization. Suggested uses include style guides, page-type requirements, changelog formats, review checklists, and API reference conventions.",
+        "Encoding repeated review comments can make expectations more consistent, but an organization-level skill is also a policy artifact. Its description controls when it is selected, its examples shape what the agent treats as acceptable, and its checklist becomes an automated gate. A vague or outdated skill can spread a poor rule across every contributor more efficiently than a conventional style guide ever could.",
+        "Manage shared skills like maintained documentation. Give each one a narrow purpose, owner, version history, test set, and review date. Prefer concrete before-and-after examples to broad adjectives, and record exceptions that require human judgment. When a skill changes, test it against representative pages before applying it across the organization."
+      ]
+    },
+    {
+      "heading": "Permissions and audience controls need one governance model",
+      "paragraphs": [
+        "Mintlify's October 19 Admin MCP update added comments and suggestions and allowed small edits without requiring a pull request. On October 20, Redocly CLI added a command for installing agent skills, and Redocly's October 22 framework release added a visibility tag that can target content to humans or AI agents. Together, these changes expand both what agents can do and what publishers can show them.",
+        "The combination introduces two related boundaries. The first is operational: whether an agent may comment, suggest, edit, or publish. The second is representational: whether the published material for an agent differs from the page a person reads. Both boundaries can be useful, but hidden divergence makes review and support harder when the machine-facing answer cannot be reproduced from the visible page.",
+        "Build one governance matrix that connects action, risk, and audience. Low-risk corrections may be safe for direct edits, while claims about security, pricing, compatibility, or deprecation should require review. If content is agent-only, keep it in the same source and review path as the human explanation, expose its audience marker in previews, and test both rendered outputs before release."
+      ]
+    }
+  ],
+  "whyThisWeekMatters": [
+    "This week's releases show documentation agents acquiring the infrastructure of an editorial team: inputs, standing instructions, permissions, review queues, and audience-specific delivery. The opportunity is faster maintenance. The risk is that unclear policy becomes invisible automation.",
+    "If you own documentation this week, map one agent-assisted workflow from signal to publication. Write down what wakes the agent, which rules it loads, what it may change, who approves the result, and how you verify the human and machine-facing outputs. Any answer that depends on tribal knowledge belongs in the governance layer."
+  ],
+  "sources": [
+    {
+      "label": "Mintlify announcement: Improved Admin MCP",
+      "date": "October 19, 2026",
+      "url": "https://www.mintlify.com/blog/improved-admin-mcp"
+    },
+    {
+      "label": "Mintlify announcement: Autopilot",
+      "date": "October 20, 2026",
+      "url": "https://www.mintlify.com/blog/autopilot"
+    },
+    {
+      "label": "Mintlify announcement: Bring your own skills",
+      "date": "October 23, 2026",
+      "url": "https://www.mintlify.com/blog/bring-your-own-skills"
+    },
+    {
+      "label": "Redocly CLI changelog: 2.66.0",
+      "date": "October 20, 2026",
+      "url": "https://redocly.com/docs/cli/changelog#2660-2026-10-20"
+    },
+    {
+      "label": "Redocly platform changelog: Framework 0.139.0",
+      "date": "October 22, 2026",
+      "url": "https://redocly.com/docs/platform/changelog#01390"
+    }
+  ]
+}

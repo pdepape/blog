@@ -158,7 +158,8 @@ function addPublishedMetadata(html, issue, slug) {
     .replace(/^\s*<meta name="robots" content="noindex, nofollow">\s*$/m, "")
     .replace(titleTag, socialMetadata)
     .replace("This draft tracks", "This roundup tracks")
-    .replace("This draft looks", "This roundup looks");
+    .replace("This draft looks", "This roundup looks")
+    .replace("This draft examines", "This roundup examines");
 
   if (!publishedHtml.includes("Related evergreen guides")) {
     publishedHtml = publishedHtml.replace(
